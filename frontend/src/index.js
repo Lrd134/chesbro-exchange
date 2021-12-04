@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import UsersContainer from './users/containers/UsersContainer';
 import UserReducer from './users/reducers/UserReducer';
 import {
   BrowserRouter as Router,
@@ -16,6 +17,7 @@ ReactDOM.render(
     <Router>  
       <Routes>
         <Route exact path="/" element={<App/>}/>
+        <Route exact path="/users" element={<UsersContainer/>}/>
       </Routes>
     </Router>
   </Provider>,

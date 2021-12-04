@@ -1,6 +1,6 @@
 import React from 'react';
 
-export let User = ({name}) => {
+export default ({name}) => {
   return (
     <p>{name}</p>
   )  
