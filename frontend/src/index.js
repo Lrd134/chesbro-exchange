@@ -4,8 +4,7 @@ import './index.css';
 import App from './App';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import UsersContainer from './users/containers/UsersContainer';
-import UserReducer from './users/reducers/UserReducer';
+import { UsersContainer, UserReducer, UserForm } from './users/UserImport';
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,6 +17,7 @@ ReactDOM.render(
       <Routes>
         <Route exact path="/" element={<App/>}/>
         <Route exact path="/users" element={<UsersContainer/>}/>
+        <Route exact path="/signup" element={<UserForm/>}/>
       </Routes>
     </Router>
   </Provider>,

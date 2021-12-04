@@ -1,8 +1,10 @@
 import React from 'react';
 
-export default ({name}) => {
+const user = ({name}) => {
   return (
     <p>{name}</p>
   )  
 }
 
+
+export default user;
