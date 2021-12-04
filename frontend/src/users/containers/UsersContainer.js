@@ -6,8 +6,8 @@ class UsersContainer extends Component {
   render() {
     const renderUsers = () => this.props.users.map(user => <User props={user}/>)
     return (
-      <div class="user-container">
-        <ul class="user-list">
+      <div className="user-container">
+        <ul className="user-list">
           {renderUsers()}
         </ul>
       </div>
