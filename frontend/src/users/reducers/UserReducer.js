@@ -17,16 +17,16 @@ const UserReducer = (state = {
       }
       return {...state, users: state.users.concat(user)}
     case("REMOVE_USER"):
-      const users = state.users.filter(user => user.id !== action.payload)
-      return {...state, users}
+      const remainingUsers = state.users.filter(user => user.id !== action.payload)
+      return {...state, remainingUsers}
     case("UPDATE_USER"):
-      const users = state.users.map(user => {
+      let updatedUsers = state.users.map(user => {
         if(user.id === action.payload.id)
           return Object.assign({}, user, action.payload);
         else
           return user;
       })
-      return {...state, users}
+      return {...state, updatedUsers}
     default:
       return state;
   }
