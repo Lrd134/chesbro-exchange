@@ -1,4 +1,4 @@
-import uuid from 'uuid';
+import { v1 as uuid } from 'uuid';
 const userReducer = (state = {
   users: [],
   requesting: false,
