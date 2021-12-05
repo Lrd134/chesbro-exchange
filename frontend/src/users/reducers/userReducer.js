@@ -2,9 +2,7 @@ import { v1 as uuid } from 'uuid';
 const userReducer = (state = {
   users: [],
   requesting: false,
-}, action = {
-  type: "SEND_USER_DATA_REQUEST",
-}) => {
+}, action) => {
   switch(action.type){
     case("SEND_USER_DATA_REQUEST"):
       return {...state, requesting: true}
