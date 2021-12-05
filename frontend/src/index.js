@@ -2,14 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import RootReducer from "./reducers";
 import { Provider } from 'react-redux';
-import { UsersContainer, UserReducer, UserForm } from './users/UserImport';
+import { UsersContainer, UserForm } from './users/UserImport';
 import {
   BrowserRouter as Router,
   Routes,
   Route } from "react-router-dom";
+
 const store = createStore(UserReducer);
+
+const store = createStore(RootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
