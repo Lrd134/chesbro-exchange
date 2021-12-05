@@ -1,4 +1,4 @@
-import BalanceActions from '/actions/BalanceActions';
-import BalanceReducer from '/reducers/BalanceReducer';
+import BalanceActions from './actions/BalanceActions';
+import BalanceReducer from './reducers/BalanceReducer';
 
-export default { BalanceActions, BalanceReducer }
+export { BalanceActions, BalanceReducer }
