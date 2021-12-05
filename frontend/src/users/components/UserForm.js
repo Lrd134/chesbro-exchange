@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { UserActions } from '../UserImport';
+import { userActions } from '../UserImport';
 class UserForm extends Component {
   state = {
     name: "",
@@ -29,7 +29,7 @@ class UserForm extends Component {
 const mapDispatchToProps = dispatch => {
  return {
    addUser: state => {
-     dispatch(UserActions.addUser(state))
+     dispatch(userActions.addUser(state))
    }
  }
 }
