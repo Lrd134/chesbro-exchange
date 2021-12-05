@@ -1,6 +1,9 @@
-actions = {
-  addUser: (name, email) => {
-    return {type: "ADD_USER", name: name, email: email}
+const UserActions = {
+  addUser: ({name, email}) => {
+    return {type: "ADD_USER", payload: {
+      name,
+      email
+    }}
   },
   removeUser: id => ({type: "REMOVE_USER", payload: id}),
   
@@ -13,4 +16,4 @@ actions = {
   },
   initUsers: () => ({type: "SEND_USER_DATA_REQUEST"}),
 }
-export default actions
+export default UserActions
