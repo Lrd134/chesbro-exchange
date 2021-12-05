@@ -14,6 +14,6 @@ const userActions = {
       email
     }}
   },
-  initUsers: () => ({type: "SEND_USER_DATA_REQUEST"}),
+  initUsers: () => ({type: "START_ADDING_USERS_REQUEST"}),
 }
 export default userActions
