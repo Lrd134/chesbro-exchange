@@ -5,6 +5,7 @@ class UsersContainer extends Component {
   
   render() {
     const renderUsers = () => this.props.users.map(user => <User props={user}/>)
+    this.props.fetchUsers();
     return (
       <div className="user-container">
         <ul className="user-list">
@@ -17,6 +18,9 @@ class UsersContainer extends Component {
 
 const mapDispatchToProps = dispatch => ({ fetchUsers: () => dispatch(fetchUsers()) })
 
-const mapStateToProps = ({users}) => ({users})
-
+const mapStateToProps = state => {
+  return {
+    users: state.users.users
+  }
+}
 export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer)
