@@ -14,6 +14,8 @@ class UsersContainer extends Component {
     )
   }
 }
-const mapStateToProps = state => ({users: state.users})
+const mapStateToProps = () => {
+    return { users: window.history.state.users }
+}
 
 export default connect(mapStateToProps)(UsersContainer)
