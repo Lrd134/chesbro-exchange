@@ -9,13 +9,15 @@ const UserReducer = (state = {
     case("SEND_USER_DATA_REQUEST"):
       return {...state, requesting: true}
     case("ADD_USER"):
-      const {name, email} = state.action.payload;
+      const {name, email} = action.payload;
       const user = {
         name,
         email,
         id: uuid()
       }
-      return {...state, users: state.users.concat(user)}
+      const newState = {...state, users: state.users.concat(user)}
+      window.history.pushState(newState, "/users", "/users");
+      return newState
     case("REMOVE_USER"):
       const remainingUsers = state.users.filter(user => user.id !== action.payload)
       return {...state, remainingUsers}
