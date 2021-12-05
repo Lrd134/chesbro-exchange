@@ -15,11 +15,10 @@ import {
 
 // ...
 
-const initialState = { counter: { count:0 } };
 const store = compose(
     applyMiddleware(thunk),
-    window.devToolsExtension && window.devToolsExtension(),
-)(createStore)(RootReducer, initialState);
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+)(createStore)(RootReducer);
 // const store = createStore(RootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
