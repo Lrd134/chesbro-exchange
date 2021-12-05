@@ -1,10 +1,10 @@
 import React from 'react';
 
-const user = ({name}) => {
+const User = ({props}) => {
   return (
-    <p>{name}</p>
+    <li>{props.name}</li>
   )  
 }
 
 
-export default user;
+export default User;
