@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { User } from '../UserImport';
+import { User, fetchUsers } from '../UserImport';
 import { connect } from 'react-redux';
 class UsersContainer extends Component {
   
@@ -14,8 +14,9 @@ class UsersContainer extends Component {
     )
   }
 }
-const mapStateToProps = () => {
-    return { users: window.history.state.users }
-}
 
-export default connect(mapStateToProps)(UsersContainer)
+const mapDispatchToProps = dispatch => ({ fetchUsers: () => dispatch(fetchUsers()) })
+
+const mapStateToProps = ({users}) => ({users})
+
+export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer)
