@@ -670,3 +670,185 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1565)
 
 
+Started GET "/users" for 127.0.0.1 at 2021-12-05 08:11:32 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 178ms (Views: 161.8ms | ActiveRecord: 25.5ms | Allocations: 4516)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 08:12:17 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1406)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 08:12:17 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 1386)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 08:12:46 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 1400)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 08:12:46 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 1386)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 08:12:48 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1386)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 08:12:48 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 1386)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mToken Load (1.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 22]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBalance Load (0.9ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Destroy (0.3ms)[0m  [1m[31mDELETE FROM "balances" WHERE "balances"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Destroy (0.1ms)[0m  [1m[31mDELETE FROM "balances" WHERE "balances"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Destroy (0.1ms)[0m  [1m[31mDELETE FROM "balances" WHERE "balances"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Destroy (0.1ms)[0m  [1m[31mDELETE FROM "balances" WHERE "balances"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Destroy (0.3ms)[0m  [1m[31mDELETE FROM "balances" WHERE "balances"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Destroy (0.1ms)[0m  [1m[31mDELETE FROM "balances" WHERE "balances"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Create (1.3ms)[0m  [1m[32mINSERT INTO "tokens" ("ticker", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ticker", "btc"], ["name", "Bitcoin"], ["created_at", "2021-12-05 15:02:31.751639"], ["updated_at", "2021-12-05 15:02:31.751639"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Create (0.1ms)[0m  [1m[32mINSERT INTO "tokens" ("ticker", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ticker", "ETH"], ["name", "Ethereum"], ["created_at", "2021-12-05 15:02:31.755938"], ["updated_at", "2021-12-05 15:02:31.755938"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Create (0.2ms)[0m  [1m[32mINSERT INTO "tokens" ("ticker", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ticker", "doge"], ["name", "doge"], ["created_at", "2021-12-05 15:02:31.759017"], ["updated_at", "2021-12-05 15:02:31.759017"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Create (0.2ms)[0m  [1m[32mINSERT INTO "tokens" ("ticker", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ticker", "usdt"], ["name", "Tether"], ["created_at", "2021-12-05 15:02:31.761496"], ["updated_at", "2021-12-05 15:02:31.761496"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Create (0.7ms)[0m  [1m[32mINSERT INTO "tokens" ("ticker", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ticker", "bnb"], ["name", "Binance"], ["created_at", "2021-12-05 15:02:31.763971"], ["updated_at", "2021-12-05 15:02:31.763971"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Larry"], ["email", "larryc3200@gmail.com"], ["created_at", "2021-12-05 15:02:31.774299"], ["updated_at", "2021-12-05 15:02:31.774299"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Nora"], ["email", "example@gmail.com"], ["created_at", "2021-12-05 15:02:31.776995"], ["updated_at", "2021-12-05 15:02:31.776995"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Create (0.2ms)[0m  [1m[32mINSERT INTO "balances" ("user_id", "token_id", "balance", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 10], ["token_id", 23], ["balance", 0.2432], ["created_at", "2021-12-05 15:02:31.792897"], ["updated_at", "2021-12-05 15:02:31.792897"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Create (0.2ms)[0m  [1m[32mINSERT INTO "balances" ("user_id", "token_id", "balance", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 9], ["token_id", 25], ["balance", 3000.32], ["created_at", "2021-12-05 15:02:31.795586"], ["updated_at", "2021-12-05 15:02:31.795586"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
