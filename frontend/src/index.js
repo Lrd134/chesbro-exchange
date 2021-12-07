@@ -6,6 +6,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { Provider } from 'react-redux';
 import RootReducer from './reducers/RootReducer'
+import { UsersContainer, UserForm } from './users/UserImport';
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,7 +25,12 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>  
       <Routes>
-        <Route exact path="/" element={<App/>}/>
+        <Route path="/" element={<App />} />
+          <Route path="signup" element={<UserForm />} />
+          <Route path="users" element={<UsersContainer />} />
+          {/* <Route path="login" element={<Login />} */}
+          
+          
       </Routes>
     </Router>
   </Provider>,
