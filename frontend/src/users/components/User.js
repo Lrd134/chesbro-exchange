@@ -1,8 +1,9 @@
 import React from 'react';
-
-const User = ({props}) => {
+import { useParams } from 'react-router-dom';
+const User = () => {
+  let params = useParams();
   return (
-    <li>{props.name}</li>
+    <li>{params.userId}</li>
   )  
 }
 
