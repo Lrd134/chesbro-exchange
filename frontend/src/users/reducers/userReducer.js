@@ -16,6 +16,10 @@ const userReducer = (state = {
       const newState = {...state, users: state.users.concat(user)}
       window.history.pushState(newState, "/users", "/users");
       return newState
+    case("ADD_USERS"):
+    {
+      return {...state, users: state.users.concat(action.users)}
+    }
     case("REMOVE_USER"):
       const remainingUsers = state.users.filter(user => user.id !== action.payload)
       return {...state, remainingUsers}
