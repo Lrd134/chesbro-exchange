@@ -26,10 +26,6 @@ ReactDOM.render(
     <Router>  
       <Routes>
         <Route path="/" element={<App />} >
-          <Route path="signup" element={<UserForm />} />
-          <Route path="users" element={<UsersContainer />} >
-            <Route path=":userId" element={<User />} />
-          </Route>
           {/* <Route path="login" element={<Login />} */}
           <Route
             path="*"
@@ -39,6 +35,10 @@ ReactDOM.render(
               </main>
             }
           />
+        </Route>
+        <Route path="signup" element={<UserForm />} />
+        <Route path="users" element={<UsersContainer />} >
+          <Route path=":userId" element={<User />} />
         </Route>
       </Routes>
     </Router>
