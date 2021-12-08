@@ -1,4 +1,3 @@
-import { v1 as uuid } from 'uuid';
 const userReducer = (state = {
   users: [],
   requesting: false,
@@ -7,17 +6,18 @@ const userReducer = (state = {
     case("SEND_USER_DATA_REQUEST"):
       return {...state, requesting: true}
     case("ADD_USER"):
-      const {name, email} = action.payload;
+      const {name, email, id} = action.payload;
       const user = {
         name,
         email,
-        id: uuid()
+        id
       }
       const newState = {...state, users: state.users.concat(user)}
       window.history.pushState(newState, "/users", "/users");
       return newState
     case("ADD_USERS"):
     {
+      console.log("Adding: " + action.users)
       return {...state, users: state.users.concat(action.users)}
     }
     case("REMOVE_USER"):
