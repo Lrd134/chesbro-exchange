@@ -35,10 +35,10 @@ ReactDOM.render(
               </main>
             }
           />
-        </Route>
-        <Route path="signup" element={<UserForm />} />
-        <Route path="users" element={<UsersContainer />} >
-          <Route path=":userId" element={<User />} />
+          
+            <Route path="signup" element={<UserForm />} />
+            <Route path="users" element={<UsersContainer />} />
+            <Route path="users/:userId" element={<User />} />
         </Route>
       </Routes>
     </Router>
