@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { fetchUsers } from '../UserImport';
+
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 class UsersContainer extends Component {
   
   render() {
     const renderUsers = () => this.props.users.map(user => <Link to={`${user.id}`} key={user.id}>{user.name}<br></br></Link>)
-    if (this.props.users.length === 0)
-      this.props.fetchUsers();
     return (
       <div className="user-container">
         <ul className="user-list">
@@ -18,11 +16,9 @@ class UsersContainer extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({ fetchUsers: () => dispatch(fetchUsers()) })
-
-const mapStateToProps = state => {
+const mapStateToProps = ({users}) => {
   return {
-    users: state.users.users
+    users: users.users
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer)
+export default connect(mapStateToProps)(UsersContainer)
