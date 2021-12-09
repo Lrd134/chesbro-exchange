@@ -1,7 +1,11 @@
 .App {
   text-align: center;
 }
-
+body {
+  background-image: url("https://i.imgur.com/1DZ8Ug8.gif");
+  background-size:cover;
+  background-color: grey;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,0 +1,22 @@
+.user {
+  background-color: black;
+  color: white;
+}
+.form {
+  background-color: darkslateblue;
+  margin: auto;
+  width: 50%;
+  height: 340px;
+  text-align: center;
+}
+.user.input {
+  background-color: rgb(70, 69, 69);
+  color: magenta;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.user.submit {
+  background-color: yellow;
+  color: purple;
+}

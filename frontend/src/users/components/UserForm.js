@@ -1,3 +1,4 @@
+import './UserForm.css'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userActions } from '../UserImport';
@@ -15,11 +16,11 @@ class UserForm extends Component {
   }
   render() {
     return (
-      <div className="form-container">
-        <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} name="user-name" type="text" className="name-input"/>
-          <input onChange={this.handleChange} name="user-email" type="text" className="email-input"/>
-          <input type="submit" className="user-submit"/>
+      <div className="user container">
+        <form onSubmit={this.handleSubmit} className="user form">
+          <input onChange={this.handleChange} name="user-name" type="text" className="user input"/><br></br>
+          <input onChange={this.handleChange} name="user-email" type="text" className="user input"/><br></br><br></br>
+          <input type="submit" className="user submit"/>
         </form>
       </div>
     )
