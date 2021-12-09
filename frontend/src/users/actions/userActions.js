@@ -14,6 +14,9 @@ const userActions = {
       email
     }}
   },
-  initUsers: () => ({type: "START_ADDING_USERS_REQUEST"}),
+  initUsers: {type: "START_ADDING_USERS_REQUEST"},
+  newUserRequest: {type: "START_CREATING_USER"},
+  updateUserRequest: {type: "START_UPDATING_USER"},
+  deleteUserRequest: {type: "START_DELETING_USER"}
 }
 export default userActions

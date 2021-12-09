@@ -3,7 +3,7 @@ const userReducer = (state = {
   requesting: false,
 }, action) => {
   switch(action.type){
-    case("SEND_USER_DATA_REQUEST"):
+    case("SEND_USER_DATA_REQUEST" || "START_UPDATING_USER" || "START_CREATING_USER" || "START_DELETING_USER"):
       return {...state, requesting: true}
     case("ADD_USER"):
       const {name, email, id} = action.payload;
