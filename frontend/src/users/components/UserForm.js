@@ -13,6 +13,18 @@ class UserForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.newUser(this.state)
+    this.setState({
+      name: "",
+      email: ""
+    })
+  }
+  componentDidMount(){
+    const history = window.history
+    if(window.sessionStorage.getItem('logged_in'))
+    {
+      history.pushState({...window.history.state}, '/u', '/u')
+      history.go(0);
+    }
   }
   render() {
     return (
