@@ -2,12 +2,12 @@
 import './App.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchUsers } from './users/UserImport';
+import { getUsers } from './users/UserImport';
 
 import { Outlet, Link } from "react-router-dom";
 class App extends Component {
   componentDidMount() {
-    this.props.fetchUsers();
+    this.props.getUsers();
   }
   render() {
     return (
@@ -21,7 +21,7 @@ class App extends Component {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    fetchUsers: () => fetchUsers(dispatch)
+    getUsers: () => getUsers(dispatch)
   }
 }
 export default connect(null, mapDispatchToProps)(App);
