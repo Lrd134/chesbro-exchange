@@ -1,7 +1,7 @@
 import './UserForm.css'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { userActions } from '../UserImport';
+import { newUser } from '../UserImport';
 class UserForm extends Component {
   state = {
     name: "",
@@ -12,7 +12,7 @@ class UserForm extends Component {
   }
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addUser(this.state)
+    this.props.newUser(this.state)
   }
   render() {
     return (
@@ -29,8 +29,8 @@ class UserForm extends Component {
 
 const mapDispatchToProps = dispatch => {
  return {
-   addUser: state => {
-     dispatch(userActions.addUser(state))
+   newUser: state => {
+      newUser(dispatch, state)
    }
  }
 }

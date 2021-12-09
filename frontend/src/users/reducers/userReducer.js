@@ -5,19 +5,20 @@ const userReducer = (state = {
   switch(action.type){
     case("SEND_USER_DATA_REQUEST" || "START_UPDATING_USER" || "START_CREATING_USER" || "START_DELETING_USER"):
       return {...state, requesting: true}
-    case("ADD_USER"):
+    case("ADD_USERS"):
+    {
+      return {...state, users: state.users.concat(action.users)}
+    }
+    case("NEW_USER"): {
       const {name, email, id} = action.payload;
       const user = {
         name,
         email,
         id
       }
-      const newState = {...state, users: state.users.concat(user)}
-      window.history.pushState(newState, "/users", "/users");
-      return newState
-    case("ADD_USERS"):
-    {
-      return {...state, users: state.users.concat(action.users)}
+      window.sessionStorage.setItem("logged_in", user.id)
+      
+      return {...state, users: state.users.concat(user)}
     }
     case("REMOVE_USER"):
       const remainingUsers = state.users.filter(user => user.id !== action.payload)
