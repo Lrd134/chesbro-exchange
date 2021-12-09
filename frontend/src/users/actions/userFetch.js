@@ -1,9 +1,9 @@
-import indexUrl from '../../indexUrl'
+import indexUrl from '../../helpers/indexUrl'
 import { userActions as Actions } from '../UserImport';
 const getUsers = dispatch => {
   dispatch(Actions.initUsers)
   fetch(indexUrl + 'users').then(resp => resp.json()).then(users =>
-    dispatch({type: "ADD_USERS", users})).catch(error => console.log(error));
+    dispatch(Actions.addUsers(users))).catch(error => console.log(error));
 };
 const newUser = (dispatch, user = {
   name: "",
@@ -24,7 +24,7 @@ const newUser = (dispatch, user = {
           })
   }
   dispatch(Actions.newUserRequest)
-  fetch(indexUrl + 'users', newUserObj).then(resp => resp.json()).then(users =>
-    dispatch({type: "ADD_USERS", users})).catch(error => console.log(error));
+  fetch(indexUrl + 'users', newUserObj).then(resp => resp.json()).then(user =>
+    dispatch(Actions.newUser(user))).catch(error => console.log(error));
 }
 export { getUsers, newUser }
