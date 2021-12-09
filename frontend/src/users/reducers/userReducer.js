@@ -17,7 +17,6 @@ const userReducer = (state = {
       return newState
     case("ADD_USERS"):
     {
-      console.log("Adding: " + action.users)
       return {...state, users: state.users.concat(action.users)}
     }
     case("REMOVE_USER"):
