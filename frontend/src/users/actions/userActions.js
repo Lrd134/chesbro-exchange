@@ -1,10 +1,15 @@
 const userActions = {
-  addUser: ({name, email}) => {
-    return {type: "ADD_USER", payload: {
+  newUser: ({name, email, id}) => ({ type: "NEW_USER", 
+    payload: {
       name,
-      email
-    }}
-  },
+      email,
+      id
+    }
+  }),
+  addUsers: users => ({
+    type: "ADD_USERS",
+    users
+  }),
   removeUser: id => ({type: "REMOVE_USER", payload: id}),
   
   updateUser: (id, name, email) => {
