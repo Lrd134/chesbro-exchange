@@ -20,9 +20,9 @@ class App extends Component {
         <Link to="/users">Users</Link>
         <Link to="/balances">Balances</Link>
         <Link to="/tokens">Tokens</Link>
-        {login.current() ? <Link to="/me">Profile</Link> : <Link to="/signup">Signup</Link>}
-        {login.current() ? <Link to="/deposit">Deposit</Link> : <Link to="/login">Login</Link>}
-        {login.current() ? <Link to="/logout">Logout</Link> : <Link to="/about">About</Link>}
+        {login.currently() ? <Link to="/me">Profile</Link> : <Link to="/signup">Signup</Link>}
+        {login.currently() ? <Link to="/deposit">Deposit</Link> : <Link to="/login">Login</Link>}
+        {login.currently() ? <Link to="/logout">Logout</Link> : <Link to="/about">About</Link>}
         <Outlet />
       </div>
     );

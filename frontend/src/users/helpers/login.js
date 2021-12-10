@@ -8,7 +8,8 @@ const login = {
         storage.clear();
         redirect();
   },
-  current: () => {
+  current: JSON.parse(storage.getItem('loggedIn')),
+  currently: () => {
     if (storage.getItem('loggedIn'))
       return true
     else
