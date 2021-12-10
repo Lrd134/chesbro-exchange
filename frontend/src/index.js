@@ -6,7 +6,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { Provider } from 'react-redux';
 import RootReducer from './reducers/RootReducer'
-import { UsersContainer, UserForm, User, UserOverlay } from './users/UserImport';
+import { UsersContainer, UserForm} from './users/UserImport';
 import {
   BrowserRouter as Router,
   Routes,
@@ -34,13 +34,8 @@ ReactDOM.render(
               </main>
             }
           />
-          
             <Route path="signup" element={<UserForm/>} />
             <Route path="users" element={<UsersContainer />} />
-            <Route path="users/:userId" element={<User />} />
-        </Route>
-        <Route path="/u" element={<UserOverlay />}>
-          <Route path="me" element={<UserForm />}/>
         </Route>
       </Routes>
     </Router>
