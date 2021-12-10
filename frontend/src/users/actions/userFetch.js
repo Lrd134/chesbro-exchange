@@ -27,4 +27,25 @@ const newUser = (dispatch, user = {
   fetch(indexUrl + 'users', newUserObj).then(resp => resp.json()).then(user =>
     dispatch(Actions.newUser(user))).catch(error => console.log(error));
 }
-export { getUsers, newUser }
+const updateUser = (dispatch, user) => {
+  const updateUserObj = {
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      "Access-Control-Allow-Origin": '*'
+    },
+    method: "PATCH",
+    body: 
+      JSON.stringify({
+        user: {
+          name: user.name,
+          email: user.email
+        }
+      })}
+  dispatch(Actions.updateUserRequest)
+  fetch(indexUrl + 'users/' + user.id, updateUserObj).then(resp => resp.json()).then(user => {
+    dispatch(Actions.updateUser(user))
+  }).catch(error => console.log(error));
+}
+
+export { getUsers, newUser, updateUser }
