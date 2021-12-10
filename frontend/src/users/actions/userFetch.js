@@ -50,9 +50,7 @@ const updateUser = (dispatch, user) => {
 const loginUser = (dispatch, user) => {
   dispatch(Actions.loginUserRequest)
   fetch(indexUrl + 'users/' + user).then(resp => resp.json()).then(user => {
-    debugger;
-    debugger;
-    debugger;
+    dispatch(Actions.loginUser(user))
   })
 }
 

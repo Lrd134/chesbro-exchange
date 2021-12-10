@@ -3,7 +3,7 @@ const userReducer = (state = {
   requesting: false,
 }, action) => {
   switch(action.type){
-    case("SEND_USER_DATA_REQUEST" || "START_UPDATING_USER" || "START_CREATING_USER" || "START_DELETING_USER"):
+    case("SEND_USER_DATA_REQUEST" || "START_UPDATING_USER" || "START_CREATING_USER" || "START_DELETING_USER" || "START_LOGIN_PROCESS"):
       return {...state, requesting: true}
     case("ADD_USERS"):
     {
@@ -31,7 +31,10 @@ const userReducer = (state = {
         else
           return user;
       })
-      return {...state, updatedUsers}
+      return {...state, updatedUsers}  
+    case("LOGIN_USER"):
+      window.sessionStorage.setItem('loggedIn', JSON.stringify({user: action.payload}))
+      return {...state};
     default:
       return state;
   }
