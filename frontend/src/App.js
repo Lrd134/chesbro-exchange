@@ -14,8 +14,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <Link to="/users">Users</Link>
-        <Link to="/signup">Signup</Link>
+        <Link to="/balances">Balances</Link>
+        {window.sessionStorage.getItem("loggedIn") ? <Link to="/me">Profile</Link> : <Link to="/signup">Signup</Link>}
         <Outlet />
       </div>
     );
