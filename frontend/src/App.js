@@ -2,10 +2,11 @@
 import './App.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getUsers } from './users/UserImport';
+import { getUsers, login } from './users/UserImport';
 import { getTokens } from './tokens/TokenImport';
 import { Outlet, Link } from "react-router-dom";
 import { getBalances } from './balances/BalanceImport';
+
 class App extends Component {
   componentDidMount() {
     this.props.getUsers();
@@ -19,8 +20,9 @@ class App extends Component {
         <Link to="/users">Users</Link>
         <Link to="/balances">Balances</Link>
         <Link to="/tokens">Tokens</Link>
-        {window.sessionStorage.getItem("loggedIn") ? <Link to="/me">Profile</Link> : <Link to="/signup">Signup</Link>}
-        {window.sessionStorage.getItem("loggedIn") ? <Link to="/deposit">Deposit</Link> : <Link to="/login">Login</Link>}
+        {login.current() ? <Link to="/me">Profile</Link> : <Link to="/signup">Signup</Link>}
+        {login.current() ? <Link to="/deposit">Deposit</Link> : <Link to="/login">Login</Link>}
+        {login.current() ? <Link to="/logout">Logout</Link> : <Link to="/about">About</Link>}
         <Outlet />
       </div>
     );
