@@ -25,8 +25,9 @@ const userReducer = (state = {
       return {...state, remainingUsers}
     case("UPDATE_USER"):
       let updatedUsers = state.users.map(user => {
+
         if(user.id === action.payload.id)
-          return Object.assign({}, user, action.payload);
+          return Object.assign({}, action.payload);
         else
           return user;
       })
