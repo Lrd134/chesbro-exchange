@@ -18,8 +18,8 @@ const userReducer = (state = {
         email,
         id
       }
-      window.sessionStorage.setItem("logged_in", JSON.stringify({user}))
-      
+      login.in({user: user})
+      redirect();
       return {...state, users: state.users.concat(user)}
     }
     case("REMOVE_USER"):
