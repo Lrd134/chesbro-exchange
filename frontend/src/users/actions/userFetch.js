@@ -1,5 +1,6 @@
 import indexUrl from '../../helpers/indexUrl'
 import { userActions as Actions } from '../UserImport';
+const users = users;
 const getUsers = dispatch => {
   dispatch(Actions.initUsers)
   fetch(indexUrl + 'users').then(resp => resp.json()).then(users =>
@@ -43,15 +44,28 @@ const updateUser = (dispatch, user) => {
         }
       })}
   dispatch(Actions.updateUserRequest)
-  fetch(indexUrl + 'users/' + user.id, updateUserObj).then(resp => resp.json()).then(user => {
+  fetch(indexUrl + users + user.id, updateUserObj).then(resp => resp.json()).then(user => {
     dispatch(Actions.updateUser(user))
   }).catch(error => console.log(error));
 }
-const loginUser = (dispatch, user) => {
+const loginUser = (dispatch, userName) => {
   dispatch(Actions.loginUserRequest)
-  fetch(indexUrl + 'users/' + user).then(resp => resp.json()).then(user => {
+  fetch(indexUrl + users + userName).then(resp => resp.json()).then(user => {
     dispatch(Actions.loginUser(user))
   })
 }
-
-export { getUsers, newUser, updateUser, loginUser }
+const deleteUser = (dispatch, user) => {
+  const deleteUserObj = {
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      "Access-Control-Allow-Origin": '*'
+    },
+    method: "DELETE"
+    }
+  dispatch(Actions.deleteUserRequest)
+  fetch(indexUrl + users + user.id, deleteUserObj).then(resp => resp.json()).then(json => {
+    console.log(json);
+  })
+}
+export { getUsers, newUser, updateUser, loginUser, deleteUser }
