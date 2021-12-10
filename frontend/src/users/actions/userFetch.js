@@ -47,5 +47,13 @@ const updateUser = (dispatch, user) => {
     dispatch(Actions.updateUser(user))
   }).catch(error => console.log(error));
 }
+const loginUser = (dispatch, user) => {
+  dispatch(Actions.loginUserRequest)
+  fetch(indexUrl + 'users/' + user).then(resp => resp.json()).then(user => {
+    debugger;
+    debugger;
+    debugger;
+  })
+}
 
-export { getUsers, newUser, updateUser }
+export { getUsers, newUser, updateUser, loginUser }
