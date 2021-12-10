@@ -6,7 +6,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { Provider } from 'react-redux';
 import RootReducer from './reducers/RootReducer'
-import { UsersContainer, UserForm, LoginForm, Logout } from './users/UserImport';
+import { UsersContainer, UserForm, LoginForm, Logout, UserContainer } from './users/UserImport';
 import { BalancesContainer } from './balances/BalanceImport';
 import { TokensContainer } from './tokens/TokenImport';
 import {
@@ -42,6 +42,7 @@ ReactDOM.render(
             <Route path="tokens" element={<TokensContainer />} />
             <Route path="login" element={<LoginForm />} />
             <Route path="logout" element={<Logout/>}/>
+            <Route path="me" element={<UserContainer />}/>
         </Route>
       </Routes>
     </Router>
