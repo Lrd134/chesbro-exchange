@@ -16,7 +16,7 @@ const userReducer = (state = {
         email,
         id
       }
-      window.sessionStorage.setItem("logged_in", user.id)
+      window.sessionStorage.setItem("logged_in", JSON.stringify({user}))
       
       return {...state, users: state.users.concat(user)}
     }
