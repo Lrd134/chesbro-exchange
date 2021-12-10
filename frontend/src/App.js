@@ -5,9 +5,11 @@ import { connect } from 'react-redux';
 import { getUsers } from './users/UserImport';
 
 import { Outlet, Link } from "react-router-dom";
+import { getBalances } from './balances/BalanceImport';
 class App extends Component {
   componentDidMount() {
     this.props.getUsers();
+    this.props.getBalances();
   }
   render() {
     return (
@@ -21,7 +23,8 @@ class App extends Component {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    getUsers: () => getUsers(dispatch)
+    getUsers: () => getUsers(dispatch),
+    getBalances: () => getBalances(dispatch)
   }
 }
 export default connect(null, mapDispatchToProps)(App);
