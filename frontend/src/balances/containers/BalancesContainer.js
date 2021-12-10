@@ -8,11 +8,13 @@ class BalancesContainer extends Component {
   render() {
     return (
       <div className="balance container">
-        {this.renderBalances()}
+        <ul>{this.renderBalances()}</ul>        
       </div>
     )
   }
 }
+const mapStateToProps = ({balances}) => ({
+  balances: balances.balances
+})
 
-
-export default connect()(BalancesContainer)
+export default connect(mapStateToProps)(BalancesContainer)
