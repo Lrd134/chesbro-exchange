@@ -1,4 +1,5 @@
 import balanceActions from './actions/balanceActions';
 import BalanceReducer from './reducers/BalanceReducer';
 import { getBalances, newBalance, updateBalance } from './actions/balanceFetch'
-export { balanceActions, BalanceReducer, getBalances, newBalance, updateBalance }
+import BalancesContainer from './containers/BalancesContainer';
+export { balanceActions, BalanceReducer, getBalances, newBalance, updateBalance, BalancesContainer }
