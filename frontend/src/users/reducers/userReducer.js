@@ -34,6 +34,8 @@ const userReducer = (state = {
       return {...state, updatedUsers}  
     case("LOGIN_USER"):
       window.sessionStorage.setItem('loggedIn', JSON.stringify({user: action.payload}))
+      window.history.pushState({}, '', '/');
+      window.history.go(0);
       return {...state};
     default:
       return state;
