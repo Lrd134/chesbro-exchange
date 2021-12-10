@@ -5331,3 +5331,387 @@ Processing by UsersController#create as JSON
 Completed 201 Created in 246ms (Views: 20.9ms | ActiveRecord: 8.4ms | Allocations: 1881)
 
 
+Started GET "/users" for 127.0.0.1 at 2021-12-09 00:31:52 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 133ms (Views: 129.1ms | ActiveRecord: 36.9ms | Allocations: 4791)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-09 00:54:15 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 273ms (Views: 230.3ms | ActiveRecord: 39.3ms | Allocations: 4738)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-09 00:55:36 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 1680)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-09 00:55:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 1.1ms | Allocations: 1680)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-09 00:55:55 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.4ms | Allocations: 1680)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-09 01:14:30 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 227ms (Views: 183.8ms | ActiveRecord: 30.4ms | Allocations: 4735)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-09 01:16:15 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 3.3ms | Allocations: 1680)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-09 01:16:29 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Mayb", "email"=>"bb@bb.com"}}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (9.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mayb"], ["email", "bb@bb.com"], ["created_at", "2021-12-09 06:16:29.473219"], ["updated_at", "2021-12-09 06:16:29.473219"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 108ms (Views: 17.8ms | ActiveRecord: 11.7ms | Allocations: 1880)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-09 01:16:34 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"", "email"=>""}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["email", ""], ["created_at", "2021-12-09 06:16:34.827307"], ["updated_at", "2021-12-09 06:16:34.827307"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 370ms (Views: 0.9ms | ActiveRecord: 1.4ms | Allocations: 1880)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-09 01:16:57 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1874)
+
+
+  [1m[36mBalance Load (1.5ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Destroy (0.3ms)[0m  [1m[31mDELETE FROM "balances" WHERE "balances"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Destroy (0.1ms)[0m  [1m[31mDELETE FROM "balances" WHERE "balances"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (71.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mToken Load (0.9ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 23]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 24]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 25]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 26]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tokens" WHERE "tokens"."id" = $1[0m  [["id", 27]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Create (1.0ms)[0m  [1m[32mINSERT INTO "tokens" ("ticker", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ticker", "btc"], ["name", "Bitcoin"], ["created_at", "2021-12-09 06:42:12.778010"], ["updated_at", "2021-12-09 06:42:12.778010"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Create (0.1ms)[0m  [1m[32mINSERT INTO "tokens" ("ticker", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ticker", "ETH"], ["name", "Ethereum"], ["created_at", "2021-12-09 06:42:12.781977"], ["updated_at", "2021-12-09 06:42:12.781977"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Create (0.1ms)[0m  [1m[32mINSERT INTO "tokens" ("ticker", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ticker", "doge"], ["name", "doge"], ["created_at", "2021-12-09 06:42:12.784460"], ["updated_at", "2021-12-09 06:42:12.784460"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Create (0.1ms)[0m  [1m[32mINSERT INTO "tokens" ("ticker", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ticker", "usdt"], ["name", "Tether"], ["created_at", "2021-12-09 06:42:12.787069"], ["updated_at", "2021-12-09 06:42:12.787069"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToken Create (0.1ms)[0m  [1m[32mINSERT INTO "tokens" ("ticker", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ticker", "bnb"], ["name", "Binance"], ["created_at", "2021-12-09 06:42:12.789424"], ["updated_at", "2021-12-09 06:42:12.789424"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Larry"], ["email", "larryc3200@gmail.com"], ["created_at", "2021-12-09 06:42:12.798414"], ["updated_at", "2021-12-09 06:42:12.798414"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Nora"], ["email", "example@gmail.com"], ["created_at", "2021-12-09 06:42:12.801297"], ["updated_at", "2021-12-09 06:42:12.801297"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Create (0.5ms)[0m  [1m[32mINSERT INTO "balances" ("user_id", "token_id", "balance", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 23], ["token_id", 28], ["balance", 0.2432], ["created_at", "2021-12-09 06:42:12.824962"], ["updated_at", "2021-12-09 06:42:12.824962"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBalance Create (0.2ms)[0m  [1m[32mINSERT INTO "balances" ("user_id", "token_id", "balance", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 22], ["token_id", 30], ["balance", 3000.32], ["created_at", "2021-12-09 06:42:12.828161"], ["updated_at", "2021-12-09 06:42:12.828161"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:10:08 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 3.4ms | ActiveRecord: 11.2ms | Allocations: 8981)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:10:44 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.7ms | Allocations: 822)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:10:48 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 822)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:12:49 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 803)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:16:21 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 1.7ms | Allocations: 822)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-10 01:16:26 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Me", "email"=>"email@email.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (34.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Me"], ["email", "email@email.com"], ["created_at", "2021-12-10 06:16:26.900960"], ["updated_at", "2021-12-10 06:16:26.900960"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 179ms (Views: 26.5ms | ActiveRecord: 35.9ms | Allocations: 2217)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:17:59 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 919)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:18:17 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 900)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:18:19 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 900)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:18:51 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 900)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:19:10 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 900)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-10 01:19:13 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Yess", "email"=>"at@email.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Yess"], ["email", "at@email.com"], ["created_at", "2021-12-10 06:19:13.649242"], ["updated_at", "2021-12-10 06:19:13.649242"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 8ms (Views: 1.0ms | ActiveRecord: 1.4ms | Allocations: 1879)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:26:48 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 146ms (Views: 135.6ms | ActiveRecord: 36.7ms | Allocations: 4053)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:36:38 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1065ms (Views: 1012.1ms | ActiveRecord: 39.7ms | Allocations: 4058)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-10 01:36:46 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Nora", "email"=>"okay@gmail.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Nora"], ["email", "okay@gmail.com"], ["created_at", "2021-12-10 06:36:46.863301"], ["updated_at", "2021-12-10 06:36:46.863301"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 47ms (Views: 11.2ms | ActiveRecord: 3.8ms | Allocations: 1886)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:37:20 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.0ms | Allocations: 1095)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:37:22 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:37:35 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-10 01:37:41 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"aass", "email"=>"asss@gmail.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aass"], ["email", "asss@gmail.com"], ["created_at", "2021-12-10 06:37:41.615158"], ["updated_at", "2021-12-10 06:37:41.615158"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 5ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 1884)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:38:37 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1192)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-10 01:38:46 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Heck", "email"=>"Hello@gmail.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Heck"], ["email", "Hello@gmail.com"], ["created_at", "2021-12-10 06:38:46.639594"], ["updated_at", "2021-12-10 06:38:46.639594"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 1879)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:39:18 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1289)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:39:29 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1289)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-10 01:39:34 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"yup", "email"=>"yup"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "yup"], ["email", "yup"], ["created_at", "2021-12-10 06:39:34.573417"], ["updated_at", "2021-12-10 06:39:34.573417"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 1879)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:39:41 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1386)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-10 01:40:03 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1386)
+
+
