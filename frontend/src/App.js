@@ -20,7 +20,7 @@ class App extends Component {
         <Link to="/balances">Balances</Link>
         <Link to="/tokens">Tokens</Link>
         {window.sessionStorage.getItem("loggedIn") ? <Link to="/me">Profile</Link> : <Link to="/signup">Signup</Link>}
-        {window.sessionStorage.getItem("loggedIn") ? null : <Link to="/login">Login</Link>}
+        {window.sessionStorage.getItem("loggedIn") ? <Link to="/deposit">Deposit</Link> : <Link to="/login">Login</Link>}
         <Outlet />
       </div>
     );
