@@ -21,7 +21,7 @@ class UserForm extends Component {
 
   render() {
     return (
-      <div className="user container">
+      <div className="signup container">
         <form onSubmit={this.handleSubmit} className="user form">
           <input onChange={this.handleChange} name="user-name" type="text" className="user input"/><br></br>
           <input onChange={this.handleChange} name="user-email" type="text" className="user input"/><br></br><br></br>
