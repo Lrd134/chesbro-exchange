@@ -12,7 +12,7 @@ const userActions = {
   }),
   removeUser: id => ({type: "REMOVE_USER", payload: id}),
   
-  updateUser: (id, name, email) => {
+  updateUser: ({id, name, email}) => {
     return {type: "UPDATE_USER", payload: {
       id,
       name,
