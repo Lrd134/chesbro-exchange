@@ -7,6 +7,7 @@ import thunk from "redux-thunk";
 import { Provider } from 'react-redux';
 import RootReducer from './reducers/RootReducer'
 import { UsersContainer, UserForm} from './users/UserImport';
+import { BalancesContainer } from './balances/BalanceImport';
 import {
   BrowserRouter as Router,
   Routes,
@@ -36,6 +37,7 @@ ReactDOM.render(
           />
             <Route path="signup" element={<UserForm/>} />
             <Route path="users" element={<UsersContainer />} />
+            <Route path="balances" element={<BalancesContainer />} />
         </Route>
       </Routes>
     </Router>
