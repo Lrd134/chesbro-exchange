@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Balance } from '../BalanceImport';
 class BalancesContainer extends Component {
 
-  renderBalances = () => (this.props.balances.map(balance => <Balance balance={balance} />));
+  renderBalances = () => (this.props.balances.map(balance => <Balance balance={balance} key={balance.id.toString()} />));
 
   render() {
     return (
