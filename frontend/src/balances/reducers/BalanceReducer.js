@@ -1,27 +1,34 @@
-import { v1 as uuid } from 'uuid';
-const BalanceReducer = (state = {
+const balanceReducer = (state = {
   balances: [],
   requesting: false,
-}, action = {
-  type: "SEND_BALANCE_DATA_REQUEST",
-}) => {
+}, action) => {
   switch(action.type){
-    case("SEND_BALANCE_DATA_REQUEST"):
+    case("SEND_BALANCE_DATA_REQUEST" || "START_UPDATING_BALANCE" || "START_CREATING_BALANCE" || "START_DELETING_BALANCE"):
       return {...state, requesting: true}
-    case("ADD_BALANCE"):
+    case("ADD_BALANCES"):
+    {
+      console.log(action.balances)
+      return {...state, balances: state.balances.concat(action.balances)}
+    }
+    case("NEW_BALANCE"): {
+      const {name, email, id} = action.payload;
       const balance = {
-        balance: action.payload,
-        id: uuid()
+        name,
+        email,
+        id
       }
-      const newState = {...state, balances: state.balances.concat(balance)}
-      return newState
+      window.sessionStorage.setItem("logged_in", JSON.stringify({balance}))
+      
+      return {...state, balances: state.balances.concat(balance)}
+    }
     case("REMOVE_BALANCE"):
       const remainingBalances = state.balances.filter(balance => balance.id !== action.payload)
       return {...state, remainingBalances}
     case("UPDATE_BALANCE"):
       let updatedBalances = state.balances.map(balance => {
+
         if(balance.id === action.payload.id)
-          return Object.assign({}, balance, action.payload);
+          return Object.assign({}, action.payload);
         else
           return balance;
       })
@@ -31,4 +38,4 @@ const BalanceReducer = (state = {
   }
 }
 
-export default BalanceReducer
+export default balanceReducer
