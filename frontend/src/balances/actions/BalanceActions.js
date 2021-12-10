@@ -1,20 +1,23 @@
-const BalanceActions = {
-  addBalance: ({balance}) => ({
-    type: "ADD_BALANCE",
-    payload: balance
-  }),
-  removeBalance: ({id}) => ({
-    type: "REMOVE_BALANCE",
-    payload: id
-  }),
-  updateBalance: ({balance, id}) => ({
-    type: "UPDATE_BALANCE",
+const balanceActions = {
+  newBalance: ({balance, id}) => ({ type: "NEW_BALANCE", 
     payload: {
-      balance,
-      id
+      //Not Finished yet
     }
   }),
-  initBalances: {type: "SEND_BALANCE_DATA_REQUEST"}
+  addBalances: balances => ({
+    type: "ADD_BALANCES",
+    balances
+  }),
+  removeBalance: id => ({type: "REMOVE_BALANCE", payload: id}),
+  updateBalance: ({balance, id}) => {
+    return {type: "UPDATE_BALANCE", payload: {
+      id,
+      balance
+    }}
+  },
+  initBalances: {type: "START_ADDING_BALANCES_REQUEST"},
+  newBalanceRequest: {type: "START_CREATING_BALANCE"},
+  updateBalanceRequest: {type: "START_UPDATING_BALANCE"},
+  deleteBalanceRequest: {type: "START_DELETING_BALANCE"}
 }
-
-export default BalanceActions
+export default balanceActions
