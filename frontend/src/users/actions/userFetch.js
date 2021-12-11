@@ -1,6 +1,6 @@
 import indexUrl from '../../helpers/indexUrl'
-import { userActions as Actions } from '../UserImport';
-const users = users;
+import { login, userActions as Actions } from '../UserImport';
+const users = "users/";
 const getUsers = dispatch => {
   dispatch(Actions.initUsers)
   fetch(indexUrl + 'users').then(resp => resp.json()).then(users =>
@@ -54,7 +54,7 @@ const loginUser = (dispatch, userName) => {
     dispatch(Actions.loginUser(user))
   })
 }
-const deleteUser = (dispatch, user) => {
+const deleteUser = (dispatch, {user}) => {
   const deleteUserObj = {
     headers: {
       "Content-Type": "application/json",
@@ -63,9 +63,14 @@ const deleteUser = (dispatch, user) => {
     },
     method: "DELETE"
     }
-  dispatch(Actions.deleteUserRequest)
-  fetch(indexUrl + users + user.id, deleteUserObj).then(resp => resp.json()).then(json => {
-    console.log(json);
-  })
+  dispatch(Actions.deleteUserRequest);
+  const url = indexUrl + users + user.id.toString();
+  fetch(url, deleteUserObj).then(resp => resp.json()).then(json => {
+    alert(json.message);
+    dispatch(Actions.removeUser(user.id));
+    login.out();
+  }).catch(error => {
+    console.log(error);
+  });
 }
 export { getUsers, newUser, updateUser, loginUser, deleteUser }
