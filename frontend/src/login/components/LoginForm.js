@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { loginUser } from '../UserImport';
+import { loginUser } from '../LoginImport';
 class LoginForm extends Component {
   state = {
     name: ""
   }
   handleSubmit = event => {
     event.preventDefault();
-    this.props.login(this.state)
     this.setState({name: ""})
   }
   handleChange = event => {

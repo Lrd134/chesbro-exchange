@@ -30,6 +30,5 @@ const userActions = {
   newUserRequest: {type: "START_CREATING_USER"},
   updateUserRequest: {type: "START_UPDATING_USER"},
   deleteUserRequest: {type: "START_DELETING_USER"},
-  loginUserRequest: {type: "START_LOGIN_PROCESS"}
 }
 export default userActions

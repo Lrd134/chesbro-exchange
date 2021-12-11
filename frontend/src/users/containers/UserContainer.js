@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { login,
-        deleteUser,
+import { deleteUser,
         updateUser,
         User, 
         UserForm } from '../UserImport';
@@ -21,7 +20,7 @@ class UserContainer extends React.Component {
     this.setState({...this.state, editing: true })
   }
   render() {
-    const { user } = login.current;
+    const user = this.props.current_user;
     return (
       <div className="profile">
         <ul>
@@ -34,6 +33,10 @@ class UserContainer extends React.Component {
     )
   }
 }
-const mapDispatchToProps = dispatch => ({ deleteUser: () => deleteUser(dispatch, login.current),
-                                          updateUser: () => updateUser(dispatch, login.current) })
-export default connect(null, mapDispatchToProps)(UserContainer);
+const mapDispatchToProps = dispatch => ({ deleteUser: () => deleteUser(dispatch),
+                                          updateUser: () => updateUser(dispatch) })
+
+const mapStateToProps = ({current_user}) => ({
+  current_user: current_user.current_user
+})                                        
+export default connect(mapStateToProps, mapDispatchToProps)(UserContainer);

@@ -1,4 +1,4 @@
-import { login, redirect } from "../UserImport";
+
 
 const LoginReducer = (state = {
   current_user: {},
@@ -8,11 +8,9 @@ const LoginReducer = (state = {
     case("START_LOGIN_PROCESS"):
       return {...state, requesting: true} 
     case("LOGIN_USER"):
-      login.in({user: action.payload})
-      redirect();
-      return {...state};
+      return {...state, current_user: action.payload};
     case("LOGOUT_USER"):
-      
+      return {...state};
     default:
       return state;
   }

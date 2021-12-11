@@ -1,10 +1,10 @@
 import indexUrl from '../../helpers/indexUrl'
-import { login, userActions as Actions } from '../UserImport';
+import { userActions } from '../UserImport';
 const users = "users/";
 const getUsers = dispatch => {
-  dispatch(Actions.initUsers)
+  dispatch(userActions.initUsers)
   fetch(indexUrl + 'users').then(resp => resp.json()).then(users =>
-    dispatch(Actions.addUsers(users))).catch(error => console.log(error));
+    dispatch(userActions.addUsers(users))).catch(error => console.log(error));
 };
 const newUser = (dispatch, user = {
   name: "",
@@ -24,12 +24,12 @@ const newUser = (dispatch, user = {
             }
           })
   }
-  dispatch(Actions.newUserRequest)
+  dispatch(userActions.newUserRequest)
   fetch(indexUrl + 'users', newUserObj).then(resp => resp.json()).then(user =>{
     if (user.message)
       alert(user.message);
     else
-      dispatch(Actions.newUser(user))
+      dispatch(userActions.newUser(user))
   }).catch(error => console.log(error));
 }
 const updateUser = (dispatch, user) => {
@@ -47,22 +47,13 @@ const updateUser = (dispatch, user) => {
           email: user.email
         }
       })}
-  dispatch(Actions.updateUserRequest)
+  dispatch(userActions.updateUserRequest)
   fetch(indexUrl + users + user.id, updateUserObj).then(resp => resp.json()).then(user => {
     if (user.message)
       alert(user.message);
     else
-      dispatch(Actions.updateUser(user))
+      dispatch(userActions.updateUser(user))
   }).catch(error => console.log(error));
-}
-const loginUser = (dispatch, userName) => {
-  dispatch(Actions.loginUserRequest)
-  fetch(indexUrl + users + userName).then(resp => resp.json()).then(user => {
-    if (user.message)
-      alert(user.message);
-    else
-      dispatch(Actions.loginUser(user))
-  })
 }
 const deleteUser = (dispatch, {user}) => {
   const deleteUserObj = {
@@ -73,14 +64,13 @@ const deleteUser = (dispatch, {user}) => {
     },
     method: "DELETE"
     }
-  dispatch(Actions.deleteUserRequest);
+  dispatch(userActions.deleteUserRequest);
   const url = indexUrl + users + user.id.toString();
   fetch(url, deleteUserObj).then(resp => resp.json()).then(json => {
     alert(json.message);
-    dispatch(Actions.removeUser(user.id));
-    login.out();
+    dispatch(userActions.removeUser(user.id));
   }).catch(error => {
     console.log(error);
   });
 }
-export { getUsers, newUser, updateUser, loginUser, deleteUser }
+export { getUsers, newUser, updateUser, deleteUser }

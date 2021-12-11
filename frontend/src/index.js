@@ -6,7 +6,8 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { Provider } from 'react-redux';
 import RootReducer from './reducers/RootReducer'
-import { UsersContainer, UserForm, LoginForm, Logout, UserContainer } from './users/UserImport';
+import { UsersContainer, UserForm, UserContainer } from './users/UserImport';
+import { LoginForm, Logout } from './login/LoginImport'
 import { BalancesContainer } from './balances/BalanceImport';
 import { TokensContainer } from './tokens/TokenImport';
 import {
