@@ -1,6 +1,6 @@
-import { login, redirect } from "../UserImport";
+import { redirect } from "../UserImport";
 
-const userReducer = (state = {
+const UserReducer = (state = {
   users: [],
   requesting: false,
 }, action) => {
@@ -18,8 +18,6 @@ const userReducer = (state = {
         email,
         id
       }
-      login.in({user: user})
-      redirect();
       return {...state, users: state.users.concat(user)}
     }
     case("REMOVE_USER"):
@@ -33,14 +31,10 @@ const userReducer = (state = {
         else
           return user;
       })
-      return {...state, updatedUsers}  
-    case("LOGIN_USER"):
-      login.in({user: action.payload})
-      redirect();
-      return {...state};
+      return {...state, updatedUsers}
     default:
       return state;
   }
 }
 
-export default userReducer
+export default UserReducer
