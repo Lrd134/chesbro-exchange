@@ -1,9 +1,9 @@
 
 
   const loginActions = {
-    loginUser: ({name}) => {
+    loginUser: (user) => {
       return { type: "LOGIN_USER", payload: {
-        name
+        user
       }}
     },
     logoutUser: ({id}) => {
