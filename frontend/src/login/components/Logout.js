@@ -1,11 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import { loginActions } from '../LoginImport';
 const Logout = props => {
-
-  props.logout();
+  const navigate = useNavigate();
   return (
-    <h1>Attempting to logout...</h1>
+    <a onClick={event=>{
+      event.preventDefault();
+      navigate('/');
+      props.logout();
+    }} href="/logout" alt="logout">Logout</a>
   )
 }
 const mapDispatchToProps = dispatch => {
