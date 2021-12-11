@@ -4,15 +4,25 @@ import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../LoginImport';
 
 const Login = (props) => {
-  debugger;
   const navigate = useNavigate();
   return (
     <a href="/login" alt="Login" onClick={event => {
       event.preventDefault();
-      props.loginUser(props.user.name);
-      navigate('/me');
+      if (props.users.users.filter(user => user.name === props.user.name).length >= 1)  {
+        props.loginUser();
+        navigate('/me');
+      }
+      else {
+        navigate('/signup')
+        alert("Please Signup")
+      }
+     
     }}>Login</a>
   )
 }
-
-export default connect(null, dispatch => ({loginUser: userName => loginUser(dispatch, userName)}))(Login)
+const mapStateToProps = state => {
+  return {
+    users: state.users
+  }
+}
+export default connect(mapStateToProps, dispatch => ({loginUser: userName => loginUser(dispatch, userName)}))(Login)
