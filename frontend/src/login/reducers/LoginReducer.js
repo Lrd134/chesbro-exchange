@@ -10,7 +10,7 @@ const LoginReducer = (state = {
     case("LOGIN_USER"):
       return {...state, current_user: action.payload};
     case("LOGOUT_USER"):
-      return {...state};
+      return {...state, current_user: {}};
     default:
       return state;
   }
