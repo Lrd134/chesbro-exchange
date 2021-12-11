@@ -7,8 +7,8 @@ const Logout = props => {
   return (
     <a onClick={event=>{
       event.preventDefault();
-      navigate('/');
       props.logout();
+      navigate('/');
     }} href="/logout" alt="logout">Logout</a>
   )
 }
