@@ -11,9 +11,12 @@ import NavBar from './NavBar';
 class App extends Component {
 
   componentDidMount() {
-    this.props.getUsers();
-    this.props.getBalances();
-    this.props.getTokens();
+    
+    !this.props.users_requesting && (this.props.users.users.length === 0) ?
+      this.props.getUsers() : console.log("Requesting Users...")
+    !this.props.balances_requesting && (this.props.balances.balances.length === 0) ?
+      this.props.getBalances() : console.log("Requesting balances...")
+    !this.props.tokens.requesting && (this.props.tokens.tokens.length === 0) ? this.props.getTokens() : console.log("Requesting tokens...");
     
   }
   render() {
