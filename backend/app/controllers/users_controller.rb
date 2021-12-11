@@ -35,7 +35,12 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   def destroy
-    @user.destroy
+    if @user
+      @user.destroy
+      render json: message: "Deleted Successfully."
+    else
+      render json: message: "User not found."
+    end
   end
 
   private
