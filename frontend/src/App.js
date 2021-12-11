@@ -36,8 +36,9 @@ const mapDispatchToProps = dispatch => {
   }
 }
 const mapStateToProps = ({current_user}) => {
+  const user = current_user.user
   return {
-    current_user: current_user
+    current_user: user
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App);
