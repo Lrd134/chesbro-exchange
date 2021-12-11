@@ -36,10 +36,12 @@ class UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     if @user
+      @message = {:message => "Deleted Successfully."}
       @user.destroy
-      render json: message: "Deleted Successfully."
+      render json: @message.to_json
     else
-      render json: message: "User not found."
+      @message = {:message => "User not found."} 
+      render json: @message.to_json
     end
   end
 
