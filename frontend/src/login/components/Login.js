@@ -9,7 +9,7 @@ const Login = (props) => {
     <a href="/login" alt="Login" onClick={event => {
       event.preventDefault();
       if (props.users.users.filter(user => user.name === props.user.name).length >= 1)  {
-        props.loginUser();
+        props.loginUser(props.user.name);
         navigate('/me');
       }
       else {
