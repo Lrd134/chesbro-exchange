@@ -10978,3 +10978,1138 @@ Processing by TokensController#index as */*
 Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1095)
 
 
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:31:30 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:31:30 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:31:30 -0500
+Processing by BalancesController#index as */*
+Processing by TokensController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mToken Load (7.4ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+  [1m[36mBalance Load (9.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 121ms (Views: 118.5ms | ActiveRecord: 44.6ms | Allocations: 10273)
+
+
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 212ms (Views: 186.1ms | ActiveRecord: 71.7ms | Allocations: 12202)
+
+
+Completed 200 OK in 131ms (Views: 129.0ms | ActiveRecord: 42.1ms | Allocations: 11572)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:34:35 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:34:35 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:34:35 -0500
+Processing by UsersController#index as */*
+Processing by TokensController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mToken Load (2.7ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 2.7ms | Allocations: 2372)
+
+
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 1.4ms | Allocations: 1865)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.6ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.6ms | Allocations: 830)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:34:36 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:34:36 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:34:36 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 1118)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1099)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 791)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:37:20 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 275ms (Views: 26.2ms | ActiveRecord: 13.5ms | Allocations: 784)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:38:20 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:38:20 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:38:20 -0500
+Processing by TokensController#index as */*
+Processing by BalancesController#index as */*
+  [1m[36mToken Load (5.8ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Processing by UsersController#index as */*
+Completed 200 OK in 650ms (Views: 640.3ms | ActiveRecord: 5.8ms | Allocations: 1669)
+
+
+  [1m[36mBalance Load (38.7ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 690ms (Views: 648.7ms | ActiveRecord: 38.7ms | Allocations: 2606)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 130ms (Views: 89.7ms | ActiveRecord: 39.9ms | Allocations: 5280)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:38:24 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 642)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:38:27 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:38:27 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:38:27 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.6ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.6ms | Allocations: 960)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1002)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.4ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 1095)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:38:49 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:38:49 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:38:49 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1017)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 795)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:38:51 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 614)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:39:05 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:39:05 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:39:05 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1060)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 795)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:39:06 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:39:06 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:39:06 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 799)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1097)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 998)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:39:18 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 614)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:40:00 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:40:00 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:40:00 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 799)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1097)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 998)
+
+
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:40:37 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:40:37 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:40:37 -0500
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1103)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 907)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 998)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:40:48 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:41:45 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 135ms (Views: 17.4ms | ActiveRecord: 7.7ms | Allocations: 614)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:42:09 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:42:09 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:42:09 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.4ms | Allocations: 1011)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.7ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.7ms | Allocations: 897)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.9ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.9ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:42:56 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 614)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:43:29 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:43:29 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:43:29 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 1014)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 459ms (Views: 457.3ms | ActiveRecord: 0.8ms | Allocations: 816)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:43:55 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 615)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:44:44 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:44:44 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:44:44 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 1123)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 795)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:44:45 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 614)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 14:47:00 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 14:47:00 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 14:47:00 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 1009)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 795)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:47:05 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 14:47:44 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 140ms (Views: 27.4ms | ActiveRecord: 3.8ms | Allocations: 614)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 16:37:28 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 16:37:28 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 16:37:28 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+Processing by BalancesController#index as */*
+Processing by TokensController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 31ms (Views: 3.4ms | ActiveRecord: 5.1ms | Allocations: 16483)
+
+
+  [1m[36mToken Load (0.7ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+  [1m[36mBalance Load (0.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 10.2ms | ActiveRecord: 4.6ms | Allocations: 19370)
+
+
+Completed 200 OK in 39ms (Views: 13.7ms | ActiveRecord: 10.6ms | Allocations: 22906)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 16:39:43 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 2857)
+
+
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 16:40:33 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 16:40:33 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 16:40:33 -0500
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1234)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1000)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 791)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 16:40:39 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 16:46:09 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 157ms (Views: 27.3ms | ActiveRecord: 8.3ms | Allocations: 614)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 16:47:32 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 16:47:32 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 16:47:32 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (2.4ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+Processing by TokensController#index as */*
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 66ms (Views: 60.3ms | ActiveRecord: 2.4ms | Allocations: 1387)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 998)
+
+
+  [1m[36mToken Load (2.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 102ms (Views: 73.4ms | ActiveRecord: 26.7ms | Allocations: 6287)
+
+
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 16:48:40 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 16:48:40 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 16:48:40 -0500
+Processing by TokensController#index as */*
+  [1m[36mToken Load (1.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+Processing by UsersController#index as */*
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.2ms | Allocations: 1448)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.2ms | Allocations: 1808)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 791)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 16:57:28 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 16:57:28 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 16:57:28 -0500
+Processing by TokensController#index as */*
+Processing by UsersController#index as */*
+Processing by BalancesController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mToken Load (1.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 18.0ms | Allocations: 9051)
+
+
+Completed 200 OK in 37ms (Views: 37.1ms | ActiveRecord: 14.5ms | Allocations: 8983)
+
+
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 15.2ms | Allocations: 10872)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 16:57:42 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 667)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 16:59:31 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 16:59:31 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 16:59:31 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 1177)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 795)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.6ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.6ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 16:59:37 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:00:58 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:00:58 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:00:58 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 799)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 1117)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:01:06 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:01:22 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:01:22 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:01:22 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1054)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 795)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:01:25 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 614)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:02:26 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 616)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:08:22 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:08:22 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:08:22 -0500
+Processing by UsersController#index as */*
+Processing by TokensController#index as */*
+Processing by BalancesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBalance Load (0.6ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 42ms (Views: 41.9ms | ActiveRecord: 13.5ms | Allocations: 11821)
+
+
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 4.4ms | Allocations: 9770)
+
+
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 13.3ms | Allocations: 12093)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:12:28 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:12:28 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:12:28 -0500
+Processing by TokensController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mToken Load (1.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 1.0ms | Allocations: 1430)
+
+
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Processing by BalancesController#index as */*
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.3ms | Allocations: 2429)
+
+
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1053)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:12:44 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:12:44 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:12:44 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1006)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 795)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:12:47 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 643)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-11 17:13:07 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Nora", "email"=>"email@email.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (3.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Nora"], ["email", "email@email.com"], ["created_at", "2021-12-11 22:13:07.100264"], ["updated_at", "2021-12-11 22:13:07.100264"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 55ms (Views: 0.2ms | ActiveRecord: 4.8ms | Allocations: 2102)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:18:57 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:18:57 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:18:57 -0500
+Processing by BalancesController#index as */*
+Processing by UsersController#index as */*
+Processing by TokensController#index as */*
+  [1m[36mBalance Load (6.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 86ms (Views: 79.0ms | ActiveRecord: 32.9ms | Allocations: 10464)
+
+
+  [1m[36mToken Load (7.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 61ms (Views: 60.9ms | ActiveRecord: 34.4ms | Allocations: 10974)
+
+
+Completed 200 OK in 69ms (Views: 68.9ms | ActiveRecord: 42.4ms | Allocations: 12313)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:19:03 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 642)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:19:56 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:19:56 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:19:56 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 1218)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1099)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 830)
+
+
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:20:14 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:20:14 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:20:14 -0500
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 1103)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 1102)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 791)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:20:16 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:24:17 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:24:17 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:24:17 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 799)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 299ms (Views: 298.7ms | ActiveRecord: 0.2ms | Allocations: 1218)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:24:19 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 615)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:25:52 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:25:52 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:25:52 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1211)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:25:57 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:27:14 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:27:14 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:27:14 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms | Allocations: 815)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 1100)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:27:32 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 614)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:28:19 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:28:19 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:28:19 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 914)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1097)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:28:37 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:28:37 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:28:37 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1104)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 795)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:28:52 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:29:24 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:29:24 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:29:24 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 795)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1097)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:29:26 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:30:53 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:30:53 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:30:53 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1218)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 795)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:31:21 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:31:21 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:31:21 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 907)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1097)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:31:38 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:31:38 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:31:38 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1122)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 819)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:31:41 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:32:11 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:32:11 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:32:11 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 801)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1097)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 1096)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:32:17 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 615)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:33:57 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:33:57 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:33:57 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 899)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1099)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:33:58 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:33:58 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:33:58 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 892)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1099)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+Started GET "/users/ayuh" for 127.0.0.1 at 2021-12-11 17:34:05 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ayuh"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "ayuh"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:35:07 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:35:07 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:35:07 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1101)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-11 17:35:09 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-11 17:35:09 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-11 17:35:09 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 799)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1100)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1095)
+
+
