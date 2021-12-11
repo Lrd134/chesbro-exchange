@@ -20,8 +20,9 @@ class UserContainer extends React.Component {
     this.setState({...this.state, editing: true })
   }
   render() {
-    const user = this.props.current_user;
-    return (
+    const {user} = this.props.current_user;
+    if (user)
+     return (
       <div className="profile">
         <ul>
           <User key={user.id} user={user} />
@@ -31,6 +32,8 @@ class UserContainer extends React.Component {
         <button onClick={this.openEditForm} >Edit {user.name}</button>
       </div>
     )
+    else
+     return (<h1>Please login.</h1>)
   }
 }
 const mapDispatchToProps = dispatch => ({ deleteUser: () => deleteUser(dispatch),
