@@ -7,6 +7,7 @@ class LoginForm extends Component {
   }
   handleSubmit = event => {
     event.preventDefault();
+    this.props.login(this.state)
     this.setState({name: ""})
   }
   handleChange = event => {
@@ -26,8 +27,7 @@ class LoginForm extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    login: ({name}) => loginUser(dispatch, name)
+    login: (state) => loginUser(dispatch, state.name)
   }
 }
-
 export default connect(null, mapDispatchToProps)(LoginForm);
