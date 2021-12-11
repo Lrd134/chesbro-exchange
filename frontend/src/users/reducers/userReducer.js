@@ -1,5 +1,3 @@
-import { redirect } from "../UserImport";
-
 const UserReducer = (state = {
   users: [],
   requesting: false,
