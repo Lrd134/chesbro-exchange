@@ -1,7 +1,19 @@
 import React from 'react';
-const Logout = () => {
+import { connect } from 'react-redux';
+import { loginActions } from '../LoginImport';
+const Logout = props => {
+
+  props.logout();
   return (
     <h1>Attempting to logout...</h1>
   )
 }
-export default Logout
+const mapDispatchToProps = dispatch => {
+  return {
+    logout: () => {
+      dispatch(loginActions.logoutUserRequest)
+      dispatch(loginActions.logoutUser)
+    }
+  }
+}
+export default connect(null, mapDispatchToProps)(Logout)
