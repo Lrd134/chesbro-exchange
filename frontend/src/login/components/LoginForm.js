@@ -16,7 +16,7 @@ class LoginForm extends Component {
     return ( 
       <div className="login container">
       <form onSubmit={this.handleSubmit} className="user form">
-        <input onChange={this.handleChange} name="user-name" type="text" className="user input" value={this.state.name}/><br></br>
+        <input onChange={this.handleChange} name="user-name" placeholder="UserName" type="text" className="user input" value={this.state.name}/><br></br>
         <Login user={this.state}/>
       </form>
     </div>
