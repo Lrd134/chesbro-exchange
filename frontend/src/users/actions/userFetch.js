@@ -25,8 +25,12 @@ const newUser = (dispatch, user = {
           })
   }
   dispatch(Actions.newUserRequest)
-  fetch(indexUrl + 'users', newUserObj).then(resp => resp.json()).then(user =>
-    dispatch(Actions.newUser(user))).catch(error => console.log(error));
+  fetch(indexUrl + 'users', newUserObj).then(resp => resp.json()).then(user =>{
+    if (user.message)
+      alert(user.message);
+    else
+      dispatch(Actions.newUser(user))
+  }).catch(error => console.log(error));
 }
 const updateUser = (dispatch, user) => {
   const updateUserObj = {
@@ -45,13 +49,19 @@ const updateUser = (dispatch, user) => {
       })}
   dispatch(Actions.updateUserRequest)
   fetch(indexUrl + users + user.id, updateUserObj).then(resp => resp.json()).then(user => {
-    dispatch(Actions.updateUser(user))
+    if (user.message)
+      alert(user.message);
+    else
+      dispatch(Actions.updateUser(user))
   }).catch(error => console.log(error));
 }
 const loginUser = (dispatch, userName) => {
   dispatch(Actions.loginUserRequest)
   fetch(indexUrl + users + userName).then(resp => resp.json()).then(user => {
-    dispatch(Actions.loginUser(user))
+    if (user.message)
+      alert(user.message);
+    else
+      dispatch(Actions.loginUser(user))
   })
 }
 const deleteUser = (dispatch, {user}) => {
