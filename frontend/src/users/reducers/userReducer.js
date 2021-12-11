@@ -24,7 +24,7 @@ const userReducer = (state = {
     }
     case("REMOVE_USER"):
       const remainingUsers = state.users.filter(user => user.id !== action.payload)
-      return {...state, remainingUsers}
+      return {...state, users: remainingUsers}
     case("UPDATE_USER"):
       let updatedUsers = state.users.map(user => {
 
