@@ -6,14 +6,7 @@
         user
       }}
     },
-    logoutUser: ({id}) => {
-      return {
-        type: "LOGOUT_USER",
-        payload:{
-          id
-        }
-      }
-    },
+    logoutUser: { type: "LOGOUT_USER" },
     loginUserRequest: {type: "START_LOGIN_PROCESS"},
     logoutUserRequest: { type: "START_LOGOUT_PROCESS"}
   }
