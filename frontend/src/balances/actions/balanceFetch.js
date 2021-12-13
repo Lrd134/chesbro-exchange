@@ -5,9 +5,10 @@ const getBalances = dispatch => {
   fetch(indexUrl + 'balances').then(resp => resp.json()).then(balances =>
     dispatch(balanceActions.addBalances(balances))).catch(error => console.log(error));
 };
-const newBalance = (dispatch, balance = {
-  name: "",
-  email: ""
+const newBalance = (dispatch, state = {
+  token: "Bitcoin",
+  balance: 0.0
+}, user
 }) => {
   const newBalanceObj = {
     headers: {

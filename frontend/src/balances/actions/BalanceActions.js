@@ -1,7 +1,7 @@
 const balanceActions = {
-  newBalance: ({balance, id}) => ({ type: "NEW_BALANCE", 
+  newBalance: ({token, balance}, user) => ({ type: "NEW_BALANCE", 
     payload: {
-      //Not Finished yet
+      
     }
   }),
   addBalances: balances => ({
