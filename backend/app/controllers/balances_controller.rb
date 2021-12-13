@@ -29,6 +29,7 @@ before_action :set_balance, only: %i[show update destroy]
       render json: {message => "Destroyed Successfully."}
     else
       render json: {message => "Failed to delete balance."}
+    end
   end
   private
     def set_balance
