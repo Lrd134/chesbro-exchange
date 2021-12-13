@@ -15,6 +15,7 @@ class BalanceContainer extends Component {
         <Balances balances={this.balances()}/>
       </div>
     )
+    if (this.props.current_user.current_user.user)
       return (
         <div>
           <label> Your Balances: 
@@ -22,6 +23,8 @@ class BalanceContainer extends Component {
           </label>
         </div>
       )
+    else
+      return (<h1>Please Login.</h1>)
   }
 }
 const mapStateToProps = state => {
