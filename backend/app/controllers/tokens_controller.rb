@@ -1,5 +1,5 @@
 class TokensController < ApplicationController
-  before_action :set_token %i[show]
+  before_action :set_token, only: %i[show]
   
   def index
     @tokens = Token.all
