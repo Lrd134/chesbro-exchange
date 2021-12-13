@@ -5,11 +5,11 @@ const getBalances = dispatch => {
   fetch(indexUrl + 'balances').then(resp => resp.json()).then(balances =>
     dispatch(balanceActions.addBalances(balances))).catch(error => console.log(error));
 };
-const newBalance = (dispatch, state = {
+const newBalance = (dispatch, payload = {
   token: "Bitcoin",
   balance: 0.0
 }, user
-}) => {
+) => {
   const newBalanceObj = {
     headers: {
         "Content-Type": "application/json",
@@ -18,9 +18,10 @@ const newBalance = (dispatch, state = {
     },
     method: "POST",
     body: JSON.stringify({
-            balance: {
-                    name: balance.name,
-                    email: balance.email
+            balance:{
+                    balance: parseFloat(payload.balance),
+                    token_id: payload.token,
+                    user_id: user.id
             }
           })
   }
