@@ -11,6 +11,13 @@ class BalanceContainer extends Component {
     balance: 0.0
   }
   balances = () => this.props.balances.balances.filter(balance => balance.user_id === this.props.current_user.current_user.user.id)
+  
+  handleChange = event => {
+    const value = event.target.value
+    const key = event.target.name.split('-')[1];
+    this.setState({
+      [key]: value
+    })
   }
   render() {
     return (
@@ -22,6 +29,7 @@ class BalanceContainer extends Component {
     if (this.props.current_user.current_user.user)
       return (
         <div>
+          <BalanceForm tokens={this.props.tokens} handleChange={this.handleChange} />
           <label> Your Balances: 
           <Balances balances={this.balances()}/>
           </label>
