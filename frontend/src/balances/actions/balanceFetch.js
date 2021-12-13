@@ -40,8 +40,7 @@ const updateBalance = (dispatch, balance) => {
     body: 
       JSON.stringify({
         balance: {
-          name: balance.name,
-          email: balance.email
+          name: "" // in progress
         }
       })}
   dispatch(balanceActions.updateBalanceRequest)
