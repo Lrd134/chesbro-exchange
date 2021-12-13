@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 const BalanceForm = props => {
   const renderOptions = () => props.tokens.tokens.map(token => (<option value={token.name}>
@@ -7,7 +6,6 @@ const BalanceForm = props => {
 
     </option>))
   return (
-    <div>
     <form  onSubmit={event => event.preventDefault()}>
       <label>
         Select Token to Deposit
@@ -20,10 +18,14 @@ const BalanceForm = props => {
       <br>
       </br>
 
-    </div>
+      <label> Deposit Amount
+        <br></br>
+        <input type="number" name="value-balance" min="0.001" required onChange={props.handleChange}/>
+      </label>
+      
     </form>
   )
 }
 
 
-export default connect()(BalanceForm)
+export default BalanceForm
