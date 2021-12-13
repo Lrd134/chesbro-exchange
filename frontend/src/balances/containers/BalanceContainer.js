@@ -6,6 +6,10 @@ import Balances from '../components/Balances';
 class BalanceContainer extends Component {
   balances = () => {
     this.props.balances.balances.filter(balance => balance.user_id === this.props.current_user.current_user.id)
+  state = {
+    token: "Bitcoin",
+    balance: 0.0
+  }
   balances = () => this.props.balances.balances.filter(balance => balance.user_id === this.props.current_user.current_user.user.id)
   }
   render() {
@@ -30,6 +34,7 @@ class BalanceContainer extends Component {
 const mapStateToProps = state => {
   return {
     balances: state.balances,
+    tokens: state.tokens,
     current_user: state.current_user
   }
 }
