@@ -19,11 +19,17 @@ class BalanceContainer extends Component {
     })
   }
   render() {
+    const data = () => {
+      return {
+        token: this.props.tokens.tokens.find(token => token.name === this.state.token).id,
+        balance: this.state.balance
+      }
+    }
     if (this.props.current_user.current_user.user)
       return (
         <div>
           <BalanceForm tokens={this.props.tokens} handleChange={this.handleChange} />
-          <Deposit deposit={() => this.props.deposit(this.state)}/>
+          <Deposit deposit={() => this.props.deposit(data(), this.props.current_user.current_user.user)}/>
           <label> Your Balances: 
           <Balances balances={this.balances()}/>
           </label>
