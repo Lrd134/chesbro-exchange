@@ -3,24 +3,24 @@ before_action :set_balance, only: %i[show update destroy]
 
   def index
     @balances = Balance.all
-    render json: @balances
+    render json: balance_serializer(@balances, {:is_collection => true})
   end
   
   def show
-    render json: @balance
+    render json: balance_serializer(@balance)
   end
   
   def create
     @balance = Balance.create(balance_params)
     if @balance
-      render json: @balance
+      render json: balance_serializer(@balance)
     else
       render json: {message => "Deposit Failed"}
     end
   end
 
   def update
-    @balance.update(balance_params) ? (render json: @balance) : (render json: {message => "Failed to update balance"})   
+    @balance.update(balance_params) ? (render json: balance_serializer(@balance)) : (render json: {message => "Failed to update balance"})   
   end
 
   def destroy
@@ -31,9 +31,14 @@ before_action :set_balance, only: %i[show update destroy]
       render json: {message => "Failed to delete balance."}
     end
   end
+
   private
     def set_balance
       @balance = Balance.find(params[:id])
+    end
+
+    def balance_serializer(balance, options = nil)
+      !options ? BalanceSerializer.new(balance).serialized_json : BalanceSerializer.new(balance, options).serialized_json
     end
 
     def balance_params

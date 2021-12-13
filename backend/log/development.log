@@ -14211,3 +14211,800 @@ Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 3434)
 
 
   [1m[36mToken Load (0.7ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+Started GET "/users" for ::1 at 2021-12-13 17:24:40 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 6715)
+
+
+  
+NameError (undefined local variable or method `is_collection' for #<UsersController:0x007f41ad95cc70>):
+  
+app/controllers/users_controller.rb:7:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:24:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:24:50 -0500
+  
+SyntaxError (/mnt/x/Development/code/Phase_5/chesbro-exchange/backend/app/controllers/users_controller.rb:7: syntax error, unexpected =>
+      is_collection: => true
+                     ^~):
+  
+app/controllers/users_controller.rb:7: syntax error, unexpected =>
+app/controllers/users_controller.rb:7: syntax error, unexpected =>
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:24:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:24:57 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 5914)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `seialized_json' for #<UserSerializer:0x00007f41ad084f80>
+Did you mean?  serialized_json):
+  
+app/controllers/users_controller.rb:41:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:24:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:25:18 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Completed 200 OK in 49ms (Views: 0.1ms | ActiveRecord: 3.4ms | Allocations: 13767)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:25:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:30:10 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 8111)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:30:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:30:12 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3088)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:30:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:36:24 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 18ms (Allocations: 2636)
+
+
+  
+NameError (uninitialized constant BalanceSerializerSerializer):
+  
+app/controllers/users_controller.rb:44:in `new'
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:36:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:36:34 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 15ms (Allocations: 2633)
+
+
+  
+NameError (uninitialized constant BalanceSerializerSerializer):
+  
+app/controllers/users_controller.rb:44:in `new'
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:36:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:36:37 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 1411)
+
+
+  
+NameError (uninitialized constant BalanceSerializerSerializer):
+  
+app/controllers/users_controller.rb:44:in `new'
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:36:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:36:40 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 17ms (Allocations: 2633)
+
+
+  
+NameError (uninitialized constant BalanceSerializerSerializer):
+  
+app/controllers/users_controller.rb:44:in `new'
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:36:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:36:54 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:44:in `serialize_user'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:44:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:44:in `serialize_user'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.7ms | Allocations: 15252)
+
+
+  
+NoMethodError (undefined method `balances' for #<Balance:0x00007f41ad7f1fc0>
+Did you mean?  balance
+               balance?
+               balance=):
+  
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:36:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:37:21 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 1293)
+
+
+  
+ArgumentError (balances is not specified as a relationship on UserSerializer):
+  
+app/controllers/users_controller.rb:44:in `new'
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:37:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:37:33 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:44:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:44:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:44:in `serialize_user'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 3.6ms | Allocations: 11766)
+
+
+  
+NoMethodError (undefined method `balances' for #<Balance:0x00007f41ad3ee8d8>
+Did you mean?  balance
+               balance?
+               balance=):
+  
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:37:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:37:50 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1337)
+
+
+  
+ArgumentError (balance is not specified as a relationship on UserSerializer):
+  
+app/controllers/users_controller.rb:44:in `new'
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:37:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:37:58 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:44:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:44:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:44:in `serialize_user'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.8ms | Allocations: 11721)
+
+
+  
+NoMethodError (undefined method `balances' for #<Balance:0x00007f41acb7d488>
+Did you mean?  balance
+               balance?
+               balance=):
+  
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:37:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:38:52 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1353)
+
+
+  
+ArgumentError (:balance is not specified as a relationship on UserSerializer):
+  
+app/controllers/users_controller.rb:44:in `new'
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:38:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:38:59 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1350)
+
+
+  
+ArgumentError (:balances is not specified as a relationship on UserSerializer):
+  
+app/controllers/users_controller.rb:44:in `new'
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:38:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:39:58 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1341)
+
+
+  
+ArgumentError (user is not specified as a relationship on UserSerializer):
+  
+app/controllers/users_controller.rb:44:in `new'
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:39:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:40:07 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 1341)
+
+
+  
+ArgumentError (self is not specified as a relationship on UserSerializer):
+  
+app/controllers/users_controller.rb:44:in `new'
+app/controllers/users_controller.rb:44:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:40:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:40:12 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 8110)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:40:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:41:59 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 3.6ms | Allocations: 13537)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:41:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:42:53 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+Completed 200 OK in 36ms (Views: 0.1ms | ActiveRecord: 3.3ms | Allocations: 13521)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:42:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:42:54 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 5759)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:42:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:43:15 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 1143)
+
+
+  
+SyntaxError (/mnt/x/Development/code/Phase_5/chesbro-exchange/backend/app/serializers/user_serializer.rb:3: syntax error, unexpected ':', expecting end
+...s_many :balances, :serializer :balance
+...                              ^):
+  
+app/serializers/user_serializer.rb:3: syntax error, unexpected ':', expecting end
+app/serializers/user_serializer.rb:3: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:43:in `serialize_user'
+app/controllers/users_controller.rb:9:in `index'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:43:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:43:25 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 3.8ms | Allocations: 13519)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:43:26 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:43:34 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 3.4ms | Allocations: 13531)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:43:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:43:59 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "balances"."id" FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 3.2ms | Allocations: 13528)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:43:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-12-13 17:44:09 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+Completed 200 OK in 30ms (Views: 0.1ms | ActiveRecord: 3.1ms | Allocations: 11368)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:44:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users/44" for ::1 at 2021-12-13 17:44:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 9696)
+
+
+Started GET "/users/Larry" for ::1 at 2021-12-13 17:44:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Larry"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Larry"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:4:in `find_by_any_params'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:43:in `serialize_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2045)
+
+
+Started GET "//tokens" for ::1 at 2021-12-13 17:45:43 -0500
+Processing by TokensController#index as HTML
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 3.3ms | ActiveRecord: 1.6ms | Allocations: 4724)
+
+
+Started GET "/tokens" for ::1 at 2021-12-13 17:45:46 -0500
+Processing by TokensController#index as HTML
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1091)
+
+
+Started GET "/tokens" for ::1 at 2021-12-13 17:47:12 -0500
+Processing by TokensController#index as HTML
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 7.6ms | ActiveRecord: 2.0ms | Allocations: 4628)
+
+
+Started GET "/tokens" for ::1 at 2021-12-13 17:47:25 -0500
+Processing by TokensController#index as HTML
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 3.7ms | ActiveRecord: 1.7ms | Allocations: 4671)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:47:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/tokens" for ::1 at 2021-12-13 17:47:26 -0500
+Processing by TokensController#index as HTML
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1090)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:47:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/tokens" for ::1 at 2021-12-13 17:52:42 -0500
+Processing by TokensController#index as HTML
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:19:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  ↳ app/controllers/tokens_controller.rb:19:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/tokens_controller.rb:19:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/tokens_controller.rb:19:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  ↳ app/controllers/tokens_controller.rb:19:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  ↳ app/controllers/tokens_controller.rb:19:in `serialize_token'
+Completed 200 OK in 42ms (Views: 0.1ms | ActiveRecord: 5.4ms | Allocations: 15702)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 17:52:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/tokens" for ::1 at 2021-12-13 18:02:05 -0500
+  
+NameError (undefined local variable or method `i' for TokensController:Class):
+  
+app/controllers/tokens_controller.rb:2:in `<class:TokensController>'
+app/controllers/tokens_controller.rb:1:in `<main>'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 18:02:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/tokens" for ::1 at 2021-12-13 18:02:10 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for TokensController):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 18:02:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/tokens" for ::1 at 2021-12-13 18:02:12 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for TokensController):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 18:02:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/tokens" for ::1 at 2021-12-13 18:02:39 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (undefined local variable or method `i' for TokensController:Class):
+  
+app/controllers/tokens_controller.rb:2:in `<class:TokensController>'
+app/controllers/tokens_controller.rb:1:in `<main>'
+Started GET "/favicon.ico" for ::1 at 2021-12-13 18:02:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/tokens" for ::1 at 2021-12-13 18:02:50 -0500
+Processing by TokensController#index as HTML
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+Completed 200 OK in 50ms (Views: 0.1ms | ActiveRecord: 3.9ms | Allocations: 20896)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 18:02:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/tokens" for ::1 at 2021-12-13 18:03:07 -0500
+Processing by TokensController#index as HTML
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 3.3ms | Allocations: 12780)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-12-13 18:03:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/balances" for ::1 at 2021-12-13 18:03:31 -0500
+Processing by BalancesController#index as HTML
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 18592)
+
+
