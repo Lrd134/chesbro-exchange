@@ -2,6 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const BalanceForm = props => {
+  const renderOptions = () => props.tokens.tokens.map(token => (<option value={token.name}>
+      {token.name}
+
+    </option>))
   return (
     <div>
     <form  onSubmit={event => event.preventDefault()}>
