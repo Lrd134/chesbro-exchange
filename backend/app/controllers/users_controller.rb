@@ -3,21 +3,24 @@ class UsersController < ApplicationController
 
   def index
     users = User.all
-    render json: users
+    options = {
+      :is_collection => true
+    }
+    render json: serialize_user(users, options)
   end
 
   def show
-    render json: @user
+    render json: serialize_user(@user)
   end
 
   def create
     @user = User.create(user_params)
-    render json: @user
+    render json: serialize_user(@user)
   end
 
   def update
     @user = User.update(user_params)
-    render json: @user
+    render json: serialize_user(@user)
   end
 
   def destroy
@@ -29,6 +32,14 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name, :email)
+    end
+
+    def serialize_user(user, options = nil)
+      if !options
+        UserSerializer.new(user).serialized_json
+      else
+        UserSerializer.new(user, options).serialized_json
+      end
     end
 
     def set_user
