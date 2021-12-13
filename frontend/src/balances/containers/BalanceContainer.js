@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BalanceForm from '../components/BalanceForm';
 import Balances from '../components/Balances';
-
+import Deposit from '../components/Deposit';
+import { newBalance } from '../actions/balanceFetch'
 class BalanceContainer extends Component {
-  balances = () => {
-    this.props.balances.balances.filter(balance => balance.user_id === this.props.current_user.current_user.id)
   state = {
     token: "Bitcoin",
     balance: 0.0
@@ -20,16 +19,11 @@ class BalanceContainer extends Component {
     })
   }
   render() {
-    return (
-      <div>
-        <BalanceForm />
-        <Balances balances={this.balances()}/>
-      </div>
-    )
     if (this.props.current_user.current_user.user)
       return (
         <div>
           <BalanceForm tokens={this.props.tokens} handleChange={this.handleChange} />
+          <Deposit deposit={this.props.deposit}/>
           <label> Your Balances: 
           <Balances balances={this.balances()}/>
           </label>
@@ -46,4 +40,9 @@ const mapStateToProps = state => {
     current_user: state.current_user
   }
 }
-export default connect(mapStateToProps)(BalanceContainer)
+const mapDispatchToProps = dispatch => {
+  return ({
+    depsoit: state => newBalance(dispatch, state)
+  })
+}
+export default connect(mapStateToProps, mapDispatchToProps)(BalanceContainer)
