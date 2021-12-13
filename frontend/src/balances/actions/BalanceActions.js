@@ -1,7 +1,7 @@
 const balanceActions = {
-  newBalance: ({token, balance}, user) => ({ type: "NEW_BALANCE", 
+  newBalance: (data) => ({ type: "NEW_BALANCE", 
     payload: {
-      
+      balance: data
     }
   }),
   addBalances: balances => ({
