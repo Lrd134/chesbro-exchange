@@ -7,7 +7,6 @@ const tokenReducer = (state = {
       return {...state, requesting: true}
     case("ADD_TOKENS"):
     {
-      console.log(action.tokens)
       return {...state, tokens: state.tokens.concat(action.tokens)}
     }
     case("NEW_TOKEN"): {
