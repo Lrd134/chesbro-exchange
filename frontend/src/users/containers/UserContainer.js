@@ -12,7 +12,7 @@ class UserContainer extends React.Component {
 
   }
   handleDelete = event => {
-    this.props.deleteUser();
+    this.props.deleteUser(this.props.current_user);
   }
   openEditForm = () => {
     this.setState({...this.state, editing: true })
@@ -34,7 +34,7 @@ class UserContainer extends React.Component {
      return (<h1>Please login.</h1>)
   }
 }
-const mapDispatchToProps = dispatch => ({ deleteUser: () => deleteUser(dispatch),
+const mapDispatchToProps = dispatch => ({ deleteUser: user => deleteUser(dispatch, user),
                                           updateUser: () => updateUser(dispatch) })
 
 const mapStateToProps = ({current_user}) => ({

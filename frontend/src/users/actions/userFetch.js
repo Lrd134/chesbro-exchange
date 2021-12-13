@@ -72,6 +72,8 @@ const deleteUser = (dispatch, {user}) => {
   fetch(url, deleteUserObj).then(resp => resp.json()).then(json => {
     alert(json.message);
     dispatch(userActions.removeUser(user.id));
+    dispatch(loginActions.logoutUserRequest)
+    dispatch(loginActions.logoutUser());
   }).catch(error => {
     console.log(error);
   });
