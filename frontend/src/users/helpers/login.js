@@ -1,4 +1,3 @@
-import { redirect } from '../UserImport';
 const storage = window.sessionStorage;
 const login = {
   in: user => {
@@ -6,7 +5,6 @@ const login = {
   },
   out: () => {
         storage.clear();
-        redirect();
   },
   current: JSON.parse(storage.getItem('loggedIn')),
   currently: () => {

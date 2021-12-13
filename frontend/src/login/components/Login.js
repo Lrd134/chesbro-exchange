@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { loginUser } from '../LoginImport';
-
+import loginUser from '../actions/loginFetch';
 const Login = (props) => {
   const navigate = useNavigate();
   return (

@@ -1,5 +1,5 @@
 import indexUrl from "../../helpers/indexUrl";
-import { loginActions } from "../LoginImport";
+import loginActions from "./loginActions";
 const loginUser = (dispatch, userName) => {
   dispatch(loginActions.loginUserRequest)
   fetch(indexUrl + 'users/' + userName).then(resp => resp.json()).then(user => {

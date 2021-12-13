@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Balance } from '../BalanceImport';
+import Balance from '../components/Balance';
 class BalancesContainer extends Component {
 
   renderBalances = () => (this.props.balances.map(balance => <Balance balance={balance} key={balance.id.toString()} />));

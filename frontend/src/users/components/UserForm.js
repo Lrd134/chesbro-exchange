@@ -1,7 +1,7 @@
 import './UserForm.css'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { newUser } from '../UserImport';
+import { newUser } from '../actions/userFetch';
 class UserForm extends Component {
   state = {
     name: "",

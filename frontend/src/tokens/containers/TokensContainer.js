@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Token } from '../TokenImport';
+import Token from '../components/Token';
 class TokensContainer extends Component {
 
   renderTokens = () => (this.props.tokens.map(token => <Token token={token} key={token.id.toString()} />));

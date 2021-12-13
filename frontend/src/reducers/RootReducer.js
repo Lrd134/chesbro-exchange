@@ -1,8 +1,9 @@
-import { UserReducer } from '../users/UserImport';
-import { BalanceReducer } from '../balances/BalanceImport';
-import { TokenReducer } from '../tokens/TokenImport';
 import { combineReducers } from 'redux';
-import { LoginReducer } from '../login/LoginImport';
+import UserReducer from '../users/reducers/UserReducer';
+import TokenReducer from '../tokens/reducers/TokenReducer';
+import BalanceReducer from '../balances/reducers/BalanceReducer';
+import LoginReducer from '../login/reducers/LoginReducer';
+
 const RootReducer = combineReducers({
   users: UserReducer,
   balances: BalanceReducer,

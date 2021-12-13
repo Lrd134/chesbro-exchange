@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { User } from '../UserImport';
 import { connect } from 'react-redux';
+import User from '../components/User';
 class UsersContainer extends Component {
   
   render() {

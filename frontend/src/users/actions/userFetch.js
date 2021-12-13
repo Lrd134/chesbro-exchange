@@ -1,5 +1,5 @@
 import indexUrl from '../../helpers/indexUrl'
-import { userActions } from '../UserImport';
+import userActions from './userActions';
 const users = "users/";
 const getUsers = dispatch => {
   dispatch(userActions.initUsers)

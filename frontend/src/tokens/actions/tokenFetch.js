@@ -1,9 +1,9 @@
 import indexUrl from '../../helpers/indexUrl'
-import { tokenActions as Actions } from '../TokenImport';
+import tokenActions from './tokenActions';
 const getTokens = dispatch => {
-  dispatch(Actions.initTokens)
+  dispatch(tokenActions.initTokens)
   fetch(indexUrl + 'tokens').then(resp => resp.json()).then(tokens =>
-    dispatch(Actions.addTokens(tokens))).catch(error => console.log(error));
+    dispatch(tokenActions.addTokens(tokens))).catch(error => console.log(error));
 };
 const newToken = (dispatch, token = {
   name: "",
@@ -23,9 +23,9 @@ const newToken = (dispatch, token = {
             }
           })
   }
-  dispatch(Actions.newTokenRequest)
+  dispatch(tokenActions.newTokenRequest)
   fetch(indexUrl + 'tokens', newTokenObj).then(resp => resp.json()).then(token =>
-    dispatch(Actions.newToken(token))).catch(error => console.log(error));
+    dispatch(tokenActions.newToken(token))).catch(error => console.log(error));
 }
 const updateToken = (dispatch, token) => {
   const updateTokenObj = {
@@ -42,9 +42,9 @@ const updateToken = (dispatch, token) => {
           email: token.email
         }
       })}
-  dispatch(Actions.updateTokenRequest)
+  dispatch(tokenActions.updateTokenRequest)
   fetch(indexUrl + 'tokens/' + token.id, updateTokenObj).then(resp => resp.json()).then(token => {
-    dispatch(Actions.updateToken(token))
+    dispatch(tokenActions.updateToken(token))
   }).catch(error => console.log(error));
 }
 

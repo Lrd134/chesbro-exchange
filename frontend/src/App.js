@@ -2,11 +2,12 @@
 import './App.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getUsers} from './users/UserImport';
-import { getTokens } from './tokens/TokenImport';
 import { Outlet } from "react-router-dom";
-import { getBalances } from './balances/BalanceImport';
 import NavBar from './NavBar';
+import { getUsers } from './users/actions/userFetch';
+import { getBalances } from './balances/actions/balanceFetch';
+import { getTokens } from './tokens/actions/tokenFetch';
+
 
 class App extends Component {
 

@@ -6,14 +6,18 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { Provider } from 'react-redux';
 import RootReducer from './reducers/RootReducer'
-import { UsersContainer, UserForm, UserContainer } from './users/UserImport';
-import { LoginForm, Logout } from './login/LoginImport'
-import { BalancesContainer } from './balances/BalanceImport';
-import { TokensContainer } from './tokens/TokenImport';
 import {
   BrowserRouter as Router,
   Routes,
   Route } from "react-router-dom";
+import UserForm from './users/components/UserForm';
+import UsersContainer from './users/containers/UsersContainer';
+import UserContainer from './users/containers/UserContainer';
+import BalancesContainer from './balances/containers/BalancesContainer';
+import TokensContainer from './tokens/containers/TokensContainer';
+import BalanceContainer from './balances/containers/BalanceContainer';
+import LoginForm from './login/components/LoginForm';
+import Logout from './login/components/Logout';
 
 
 // ...
@@ -44,6 +48,7 @@ ReactDOM.render(
             <Route path="login" element={<LoginForm />} />
             <Route path="logout" element={<Logout/>}/>
             <Route path="me" element={<UserContainer />}/>
+            <Route path="/deposit" element={<BalanceContainer />}/>
         </Route>
       </Routes>
     </Router>

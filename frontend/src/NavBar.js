@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import React, { Component} from 'react';
-import { Logout } from './login/LoginImport';
+import Logout from './login/components/Logout';
 class NavBar extends Component {
+  
   render() {
     return (
       <React.Fragment>

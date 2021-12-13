@@ -1,9 +1,9 @@
 import indexUrl from '../../helpers/indexUrl'
-import { balanceActions as Actions } from '../BalanceImport';
+import balanceActions from './balanceActions';
 const getBalances = dispatch => {
-  dispatch(Actions.initBalances)
+  dispatch(balanceActions.initBalances)
   fetch(indexUrl + 'balances').then(resp => resp.json()).then(balances =>
-    dispatch(Actions.addBalances(balances))).catch(error => console.log(error));
+    dispatch(balanceActions.addBalances(balances))).catch(error => console.log(error));
 };
 const newBalance = (dispatch, balance = {
   name: "",
@@ -23,9 +23,9 @@ const newBalance = (dispatch, balance = {
             }
           })
   }
-  dispatch(Actions.newBalanceRequest)
+  dispatch(balanceActions.newBalanceRequest)
   fetch(indexUrl + 'balances', newBalanceObj).then(resp => resp.json()).then(balance =>
-    dispatch(Actions.newBalance(balance))).catch(error => console.log(error));
+    dispatch(balanceActions.newBalance(balance))).catch(error => console.log(error));
 }
 const updateBalance = (dispatch, balance) => {
   const updateBalanceObj = {
@@ -42,9 +42,9 @@ const updateBalance = (dispatch, balance) => {
           email: balance.email
         }
       })}
-  dispatch(Actions.updateBalanceRequest)
+  dispatch(balanceActions.updateBalanceRequest)
   fetch(indexUrl + 'balances/' + balance.id, updateBalanceObj).then(resp => resp.json()).then(balance => {
-    dispatch(Actions.updateBalance(balance))
+    dispatch(balanceActions.updateBalance(balance))
   }).catch(error => console.log(error));
 }
 

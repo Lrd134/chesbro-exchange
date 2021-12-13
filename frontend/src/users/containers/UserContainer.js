@@ -1,10 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { deleteUser,
-        updateUser,
-        User, 
-        UserForm } from '../UserImport';
-
+import User from '../components/User';
+import UserForm from '../components/UserForm';
+import { deleteUser, updateUser } from '../actions/userFetch';
 
 class UserContainer extends React.Component { 
   state= {
