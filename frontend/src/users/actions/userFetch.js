@@ -1,5 +1,6 @@
 import indexUrl from '../../helpers/indexUrl'
 import userActions from './userActions';
+import loginActions from '../../login/actions/loginActions';
 const users = "users/";
 const getUsers = dispatch => {
   dispatch(userActions.initUsers)
@@ -28,8 +29,10 @@ const newUser = (dispatch, user = {
   fetch(indexUrl + 'users', newUserObj).then(resp => resp.json()).then(user =>{
     if (user.message)
       alert(user.message);
-    else
-      dispatch(userActions.newUser(user))
+    else {
+      dispatch(userActions.newUser(user));
+      dispatch(loginActions.loginUser(user));
+    }
   }).catch(error => console.log(error));
 }
 const updateUser = (dispatch, user) => {
