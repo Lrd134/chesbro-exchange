@@ -1,51 +1,42 @@
 class BalancesController < ApplicationController
-  before_action :set_balance, only: [:show, :update, :destroy]
+before_action :set_balance, only: %i[show update destroy]
 
-  # GET /balances
   def index
     @balances = Balance.all
-
     render json: @balances
   end
-
-  # GET /balances/1
+  
   def show
     render json: @balance
   end
-
-  # POST /balances
+  
   def create
-    @balance = Balance.new(balance_params)
-
-    if @balance.save
-      render json: @balance, status: :created, location: @balance
-    else
-      render json: @balance.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /balances/1
-  def update
-    if @balance.update(balance_params)
+    @balance = Balance.create(balance_params)
+    if @balance
       render json: @balance
     else
-      render json: @balance.errors, status: :unprocessable_entity
+      render json: {message => "Deposit Failed"}
     end
   end
 
-  # DELETE /balances/1
-  def destroy
-    @balance.destroy
+  def update
+    @balance.update(balance_params) ? (render json: @balance) : (render json: {message => "Failed to update balance"})   
   end
 
+  def destroy
+    if @balance
+      @balance.destroy
+      render json: {message => "Destroyed Successfully."}
+    else
+      render json: {message => "Failed to delete balance."}
+  end
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_balance
       @balance = Balance.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def balance_params
-      params.fetch(:balance, {})
+      params.require(:balance).permit(:user_id, :token_id, :balance)
     end
+
 end
