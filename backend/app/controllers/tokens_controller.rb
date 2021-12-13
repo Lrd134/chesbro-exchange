@@ -1,51 +1,27 @@
 class TokensController < ApplicationController
-  before_action :set_token, only: [:show, :update, :destroy]
-
-  # GET /tokens
+  before_action :set_token %i[show]
+  
   def index
     @tokens = Token.all
-
-    render json: @tokens
+    render json: serialize_token(@tokens, {:is_collection => true})
   end
 
-  # GET /tokens/1
   def show
-    render json: @token
-  end
-
-  # POST /tokens
-  def create
-    @token = Token.new(token_params)
-
-    if @token.save
-      render json: @token, status: :created, location: @token
-    else
-      render json: @token.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /tokens/1
-  def update
-    if @token.update(token_params)
-      render json: @token
-    else
-      render json: @token.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /tokens/1
-  def destroy
-    @token.destroy
+    render json: serialize_token(@token)
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
+    def token_params
+      params.require(:token)
+    end
+
+    def serialize_token (token, options = nil)
+      !options ? TokenSerializer.new(token).serialized_json : TokenSerializer.new(token, options).serialized_json
+    end
+
     def set_token
       @token = Token.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
-    def token_params
-      params.fetch(:token, {})
-    end
 end
