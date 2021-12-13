@@ -23,7 +23,7 @@ class BalanceContainer extends Component {
       return (
         <div>
           <BalanceForm tokens={this.props.tokens} handleChange={this.handleChange} />
-          <Deposit deposit={this.props.deposit}/>
+          <Deposit deposit={() => this.props.deposit(this.state)}/>
           <label> Your Balances: 
           <Balances balances={this.balances()}/>
           </label>
@@ -42,7 +42,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
   return ({
-    depsoit: state => newBalance(dispatch, state)
+    deposit: state => newBalance(dispatch, state)
   })
 }
 export default connect(mapStateToProps, mapDispatchToProps)(BalanceContainer)
