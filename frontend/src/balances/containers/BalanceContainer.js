@@ -6,6 +6,7 @@ import Balances from '../components/Balances';
 class BalanceContainer extends Component {
   balances = () => {
     this.props.balances.balances.filter(balance => balance.user_id === this.props.current_user.current_user.id)
+  balances = () => this.props.balances.balances.filter(balance => balance.user_id === this.props.current_user.current_user.user.id)
   }
   render() {
     return (
@@ -14,6 +15,13 @@ class BalanceContainer extends Component {
         <Balances balances={this.balances()}/>
       </div>
     )
+      return (
+        <div>
+          <label> Your Balances: 
+          <Balances balances={this.balances()}/>
+          </label>
+        </div>
+      )
   }
 }
 const mapStateToProps = state => {
