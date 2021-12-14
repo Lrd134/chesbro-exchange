@@ -5,7 +5,7 @@ const users = "users/";
 const getUsers = dispatch => {
   dispatch(userActions.initUsers)
   fetch(indexUrl + 'users').then(resp => resp.json()).then(users =>
-    dispatch(userActions.addUsers(users))).catch(error => console.log(error));
+    dispatch(userActions.addUsers(users.data))).catch(error => console.log(error));
 };
 const newUser = (dispatch, user = {
   name: "",

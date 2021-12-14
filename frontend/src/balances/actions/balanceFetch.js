@@ -2,9 +2,14 @@ import indexUrl from '../../helpers/indexUrl'
 import balanceActions from './balanceActions';
 const getBalances = dispatch => {
   dispatch(balanceActions.initBalances)
-  fetch(indexUrl + 'balances').then(resp => resp.json()).then(balances =>
-    dispatch(balanceActions.addBalances(balances))).catch(error => console.log(error));
+  fetch(indexUrl + 'balances').then(resp => resp.json()).then(json =>{
+    const balances = json.data;
+    dispatch(balanceActions.addBalances(balances))
+  }).catch(error => console.log(error));
 };
+
+
+
 const newBalance = (dispatch, payload = {
   token: "Bitcoin",
   balance: 0.0
@@ -26,9 +31,15 @@ const newBalance = (dispatch, payload = {
           })
   }
   dispatch(balanceActions.newBalanceRequest)
-  fetch(indexUrl + 'balances', newBalanceObj).then(resp => resp.json()).then(balance =>
+  fetch(indexUrl + 'balances', newBalanceObj)
+  .then(resp => resp.json())
+  .then(balance =>
     dispatch(balanceActions.newBalance(balance))).catch(error => console.log(error));
 }
+
+
+
+
 const updateBalance = (dispatch, balance) => {
   const updateBalanceObj = {
     headers: {

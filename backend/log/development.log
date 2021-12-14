@@ -15008,3 +15008,1158 @@ Processing by BalancesController#index as HTML
 Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 18592)
 
 
+Started GET "/users" for 127.0.0.1 at 2021-12-13 18:10:08 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 18:10:08 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 18:10:08 -0500
+Processing by BalancesController#index as */*
+Processing by TokensController#index as */*
+  [1m[36mBalance Load (0.9ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  [1m[36mToken Load (1.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mToken Load (0.6ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 12.3ms | Allocations: 14539)
+
+
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 67ms (Views: 0.1ms | ActiveRecord: 15.7ms | Allocations: 27472)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 4105)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 18:10:25 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 18:10:25 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 18:10:25 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.5ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 4114)
+
+
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+Processing by TokensController#index as */*
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mToken Load (0.5ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 9021)
+
+
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 21714)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 18:12:18 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 18:12:18 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 18:12:18 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3794)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.7ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.5ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 5506)
+
+
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.4ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 16054)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 18:12:19 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 18:12:20 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 18:12:20 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.5ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.7ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3993)
+
+
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Processing by TokensController#index as */*
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.4ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 8786)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 21704)
+
+
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 18:13:29 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-13 18:13:29 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 18:13:29 -0500
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.6ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+Processing by UsersController#index as */*
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 6245)
+
+
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Processing by TokensController#index as */*
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 8826)
+
+
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 24455)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 18:24:50 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 18:24:50 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 18:24:50 -0500
+Processing by BalancesController#index as */*
+Processing by UsersController#index as */*
+Processing by TokensController#index as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBalance Load (2.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mToken Load (3.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (1.0ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  [1m[36mToken Load (1.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.1ms | ActiveRecord: 45.4ms | Allocations: 18369)
+
+
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 66ms (Views: 0.1ms | ActiveRecord: 36.6ms | Allocations: 21349)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 104ms (Views: 0.1ms | ActiveRecord: 39.2ms | Allocations: 33770)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 19:40:22 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 19:40:22 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 19:40:22 -0500
+Processing by BalancesController#index as */*
+Processing by TokensController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mToken Load (1.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (2.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (5.5ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  [1m[36mBalance Load (0.9ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mToken Load (2.6ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (1.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Completed 200 OK in 221ms (Views: 8.3ms | ActiveRecord: 53.5ms | Allocations: 17430)
+
+
+  [1m[36mBalance Load (22.5ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  [1m[36mToken Load (1.8ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (2.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 295ms (Views: 0.1ms | ActiveRecord: 95.8ms | Allocations: 21272)
+
+
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 864ms (Views: 0.1ms | ActiveRecord: 52.5ms | Allocations: 33609)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 19:41:44 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 19:41:44 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 19:41:44 -0500
+Processing by TokensController#index as */*
+Processing by UsersController#index as */*
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (5.7ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  [1m[36mToken Load (12.6ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (21.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (1.0ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (3.7ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  [1m[36mToken Load (16.6ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 158ms (Views: 3.2ms | ActiveRecord: 23.2ms | Allocations: 8113)
+
+
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mToken Load (10.8ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.4ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.5ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+Completed 200 OK in 233ms (Views: 0.2ms | ActiveRecord: 17.5ms | Allocations: 12759)
+
+
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 221ms (Views: 0.1ms | ActiveRecord: 36.8ms | Allocations: 23705)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 19:42:40 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 19:42:40 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 19:42:40 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.4ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (1.0ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 3800)
+
+
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.4ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.9ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (1.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mToken Load (1.4ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+Completed 200 OK in 34ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 6780)
+
+
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 186ms (Views: 0.1ms | ActiveRecord: 6.0ms | Allocations: 17381)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 19:44:30 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 19:44:30 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 19:44:30 -0500
+Processing by UsersController#index as */*
+Processing by BalancesController#index as */*
+Processing by TokensController#index as */*
+  [1m[36mBalance Load (4.7ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  [1m[36mToken Load (9.5ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mToken Load (9.4ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mBalance Load (2.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (1.7ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mToken Load (0.9ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.5ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+Completed 200 OK in 144ms (Views: 2.5ms | ActiveRecord: 19.7ms | Allocations: 11007)
+
+
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+Completed 200 OK in 129ms (Views: 0.1ms | ActiveRecord: 11.8ms | Allocations: 12658)
+
+
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 177ms (Views: 0.1ms | ActiveRecord: 17.4ms | Allocations: 23957)
+
+
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 19:45:18 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-13 19:45:18 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 19:45:18 -0500
+Processing by BalancesController#index as */*
+Processing by TokensController#index as */*
+  [1m[36mBalance Load (1.6ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  [1m[36mToken Load (1.6ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Processing by UsersController#index as */*
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mToken Load (2.7ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBalance Load (0.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mBalance Load (5.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  [1m[36mBalance Load (0.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mToken Load (2.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mBalance Load (1.3ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  [1m[36mBalance Load (1.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 6.9ms | Allocations: 8648)
+
+
+  [1m[36mBalance Load (2.0ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 55ms (Views: 0.3ms | ActiveRecord: 6.0ms | Allocations: 13250)
+
+
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 99ms (Views: 0.4ms | ActiveRecord: 8.1ms | Allocations: 24224)
+
+
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 19:48:07 -0500
+Started GET "/users" for 127.0.0.1 at 2021-12-13 19:48:07 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 19:48:07 -0500
+Processing by UsersController#index as */*
+Processing by TokensController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mToken Load (2.4ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Processing by BalancesController#index as */*
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  [1m[36mBalance Load (0.5ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  [1m[36mBalance Load (2.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mToken Load (1.6ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.9ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 223ms (Views: 0.1ms | ActiveRecord: 4.4ms | Allocations: 10838)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+Completed 200 OK in 218ms (Views: 0.1ms | ActiveRecord: 3.9ms | Allocations: 11270)
+
+
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 39ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 22585)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 19:48:09 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 19:48:09 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 19:48:09 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3679)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.5ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Processing by TokensController#index as */*
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 8900)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.1ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 20103)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 19:48:43 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 19:48:43 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 19:48:43 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.4ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Processing by TokensController#index as */*
+  [1m[36mBalance Load (0.8ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 3968)
+
+
+  [1m[36mToken Load (0.9ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.9ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 6677)
+
+
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (7.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 50ms (Views: 0.1ms | ActiveRecord: 9.2ms | Allocations: 14582)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-13 19:49:08 -0500
+Started GET "/tokens" for 127.0.0.1 at 2021-12-13 19:49:08 -0500
+Started GET "/balances" for 127.0.0.1 at 2021-12-13 19:49:08 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 44]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Processing by TokensController#index as */*
+  [1m[36mBalance Load (0.4ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 45]]
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+  [1m[36mToken Load (0.3ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens"[0m
+  [1m[36mBalance Load (0.1ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."user_id" = $1[0m  [["user_id", 46]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  ↳ app/controllers/users_controller.rb:41:in `serialize_user'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 4745)
+
+
+  [1m[36mBalance Load (0.7ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 33]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.9ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 34]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 35]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.2ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 36]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+Processing by BalancesController#index as */*
+  [1m[36mBalance Load (0.6ms)[0m  [1m[34mSELECT "balances".* FROM "balances" WHERE "balances"."token_id" = $1[0m  [["token_id", 37]]
+  ↳ app/controllers/tokens_controller.rb:20:in `serialize_token'
+  [1m[36mBalance Load (0.4ms)[0m  [1m[34mSELECT "balances".* FROM "balances"[0m
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 7656)
+
+
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.8ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.2ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE Token Load (0.0ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mToken Load (0.4ms)[0m  [1m[34mSELECT "tokens".* FROM "tokens" WHERE "tokens"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/balances_controller.rb:41:in `balance_serializer'
+Completed 200 OK in 43ms (Views: 0.1ms | ActiveRecord: 3.1ms | Allocations: 16046)
+
+

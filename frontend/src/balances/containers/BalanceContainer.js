@@ -9,7 +9,7 @@ class BalanceContainer extends Component {
     token: "Bitcoin",
     balance: 0.0
   }
-  balances = () => this.props.balances.balances.filter(balance => balance.user_id === this.props.current_user.current_user.user.id)
+  balances = () => this.props.balances.balances.filter(({attributes}) => attributes.user_id === this.props.current_user.current_user.user.id)
   
   handleChange = event => {
     const value = event.target.value
@@ -21,7 +21,7 @@ class BalanceContainer extends Component {
   render() {
     const data = () => {
       return {
-        token: this.props.tokens.tokens.find(token => token.name === this.state.token).id,
+        token: this.props.tokens.tokens.find(({attributes}) => attributes.name === this.state.token).id,
         balance: this.state.balance
       }
     }
