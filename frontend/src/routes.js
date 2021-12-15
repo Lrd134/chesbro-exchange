@@ -3,11 +3,12 @@ import Home from './root/containers/Home';
 import UserForm from './users/components/UserForm';
 import UsersContainer from './users/containers/UsersContainer';
 import UserContainer from './users/containers/UserContainer';
-import BalancesContainer from './balances/containers/BalancesContainer';
+// import BalancesContainer from './balances/containers/BalancesContainer';
 import TokensContainer from './tokens/containers/TokensContainer';
 import BalanceContainer from './balances/containers/BalanceContainer';
 import LoginForm from './login/components/LoginForm';
 import Logout from './login/components/Logout';
+import Exchange from "./exchange/containers/Exchange";
 
 const myRoutes = () => {
   return (
@@ -23,7 +24,7 @@ const myRoutes = () => {
       />
         <Route path="signup" element={<UserForm/>} />
         <Route path="users" element={<UsersContainer />} />
-        <Route path="balances" element={<BalancesContainer />} />
+        <Route path="exchange" element={<Exchange />} />
         <Route path="tokens" element={<TokensContainer />} />
         <Route path="login" element={<LoginForm />} />
         <Route path="logout" element={<Logout/>}/>

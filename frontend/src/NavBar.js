@@ -8,7 +8,7 @@ class NavBar extends Component {
     return (
       <React.Fragment>
         <Link to="/users">Users</Link>
-        <Link to="/balances">Balances</Link>
+        <Link to="/exchange">Exchange</Link>
         <Link to="/tokens">Tokens</Link>
         {this.props.props.current_user.user ? <Link to="/me">Profile</Link> : <Link to="/signup">Signup</Link>}
         {this.props.props.current_user.user ? <Link to="/deposit">Deposit</Link> : <Link to="/login">Login</Link>}
