@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :tokens, only: :show
+  resources :tokens, only: :index
   resources :balances
   resources :users
   resources :orders
