@@ -3,9 +3,7 @@ import { connect } from 'react-redux';
 import Token from '../components/Token';
 class TokensContainer extends Component {
 
-  renderTokens = () => (this.props.tokens.map(({attributes}) => {
-    debugger;
-  }));
+  renderTokens = () => (this.props.tokens.map(({attributes}) => <Token token={attributes}/>));
 
   render() {
     return (

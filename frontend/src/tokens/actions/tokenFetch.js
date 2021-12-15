@@ -3,7 +3,7 @@ import tokenActions from './tokenActions';
 const getTokens = dispatch => {
   dispatch(tokenActions.initTokens)
   fetch(indexUrl + 'tokens').then(resp => resp.json()).then(tokens =>
-    dispatch(tokenActions.addTokens(tokens))).catch(error => console.log(error));
+    dispatch(tokenActions.addTokens(tokens.data))).catch(error => console.log(error));
 };
 const newToken = (dispatch, token = {
   name: "",
