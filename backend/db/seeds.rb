@@ -13,5 +13,6 @@ usdt = Token.create(ticker: "usdt", name: "Tether")
 bnb = Token.create(ticker: "bnb", name: "Binance")
 larry = User.create(name: "Larry", email:"larryc3200@gmail.com")
 nora = User.create(name: "Nora", email:"example@gmail.com")
-Balance.create(balance: 0.2432, token: btc, user: nora)
-Balance.create(balance: 3000.32, token: doge, user: larry)
+nora_balance1 = Balance.create(balance: 0.2432, token: btc, user: nora)
+larry_balance1 = Balance.create(balance: 3000.32, token: doge, user: larry)
+
