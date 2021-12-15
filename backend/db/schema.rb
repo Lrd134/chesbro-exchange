@@ -10,17 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_30_040952) do
+ActiveRecord::Schema.define(version: 2021_12_15_220916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "balances", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "token_id"
+    t.integer "user_id", null: false
+    t.integer "token_id", null: false
     t.float "balance"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "token_id", null: false
+    t.float "amount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["token_id"], name: "index_orders_on_token_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "tokens", force: :cascade do |t|
@@ -37,4 +47,6 @@ ActiveRecord::Schema.define(version: 2021_11_30_040952) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "orders", "tokens"
+  add_foreign_key "orders", "users"
 end
