@@ -30,8 +30,12 @@ const sellOrder = (dispatch, payload) => {
   dispatch(orderActions.newOrderRequest)
   fetch(indexUrl + 'orders', newOrderObj)
   .then(resp => resp.json())
-  .then(order =>
-    dispatch(orderActions.newOrder(order.data))).catch(error => console.log(error));
+  .then(order =>{
+    if (order.message)
+      alert(order.message);
+    else
+      dispatch(orderActions.newOrder(order.data))
+    }).catch(error => console.log(error));
 }
 
 export { getOrders, sellOrder }
