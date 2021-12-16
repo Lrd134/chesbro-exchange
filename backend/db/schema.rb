@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_220916) do
     t.bigint "user_id", null: false
     t.bigint "token_id", null: false
     t.float "amount"
+    t.boolean "sell"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["token_id"], name: "index_orders_on_token_id"
