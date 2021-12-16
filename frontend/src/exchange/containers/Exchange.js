@@ -5,7 +5,7 @@ const Exchange = props => {
   return (
     <div className="exchange-container">
       <h1>Choose a Currency to Trade With</h1>
-      <TokensContainer showLink={true}/>
+      <TokensContainer noUsd={true} showLink={true}/>
     </div>
   )
 }
