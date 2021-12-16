@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 import Token from '../components/Token';
 class TokensContainer extends Component {
 
-  renderTokens = () => (this.props.tokens.map(({attributes}) => <Token link={this.props.showLink} token={attributes}/>));
+  renderTokens = () => (this.props.tokens.map(({attributes}) => {
+    if (attributes.ticker === "usd")
+      return null
+    else
+      return <Token link={this.props.showLink} token={attributes}/>
+  }));
 
   render() {
     return (
