@@ -18,16 +18,16 @@ class UserContainer extends React.Component {
     this.setState({...this.state, editing: true })
   }
   render() {
-    const {user} = this.props.current_user;
+    const user = this.props.current_user.user;
     if (user)
      return (
       <div className="profile">
         <ul>
-          <User key={user.id} user={user} />
+          <User key={user.attributes.id} user={user.attributes} />
           {this.state.editing ? <UserForm /> : null}
         </ul>
-        <button onClick={this.handleDelete} >Delete {user.name}</button>
-        <button onClick={this.openEditForm} >Edit {user.name}</button>
+        <button onClick={this.handleDelete} >Delete {user.attributes.name}</button>
+        <button onClick={this.openEditForm} >Edit {user.attributes.name}</button>
       </div>
     )
     else
