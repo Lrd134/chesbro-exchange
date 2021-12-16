@@ -7,7 +7,7 @@ const balanceReducer = (state = {
       return {...state, requesting: true}
     case("ADD_BALANCES"):
     {
-      return {...state, balances: state.balances.concat(action.balances)}
+      return {...state, balances: action.balances}
     }
     case("NEW_BALANCE"): {      
       return {...state, balances: state.balances.concat(action.payload.balance)}
