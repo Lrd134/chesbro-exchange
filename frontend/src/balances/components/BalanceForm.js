@@ -1,8 +1,8 @@
 import React from 'react';
 
 const BalanceForm = props => {
-  const renderOptions = () => props.tokens.tokens.map(token => (<option value={token.name}>
-      {token.name}
+  const renderOptions = () => props.tokens.tokens.map(({attributes})=> (<option value={attributes.name}>
+      {attributes.name}
 
     </option>))
   return (
