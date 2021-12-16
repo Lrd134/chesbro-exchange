@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Order from '../components/Order';
+import Orders from '../components/Orders';
 import { sellOrder } from '../actions/orderFetch';
 class OrderContainer extends Component {
   state = {
@@ -29,6 +30,7 @@ class OrderContainer extends Component {
       return (
         <div className='order-container'>
           <Order handleSell={this.handleSell} handleBuy={this.handleBuy} handleChange={this.handleChange} amounts={this.state.amounts} current_user={this.props.current_user}/>
+          <Orders/>
         </div>
       )
     else
