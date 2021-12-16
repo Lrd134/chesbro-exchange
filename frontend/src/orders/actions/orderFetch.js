@@ -1,5 +1,6 @@
 import indexUrl from '../../helpers/indexUrl'
 import orderActions from './orderActions';
+import { getBalances } from '../../balances/actions/balanceFetch'
 const getOrders = dispatch => {
   dispatch(orderActions.initOrders)
   fetch(indexUrl + 'orders').then(resp => resp.json()).then(json =>{
@@ -10,7 +11,7 @@ const getOrders = dispatch => {
 
 
 
-const sellOrder = (dispatch, payload) => {
+const newOrder = (dispatch, payload) => {
   const newOrderObj = {
     headers: {
         "Content-Type": "application/json",
@@ -36,7 +37,8 @@ const sellOrder = (dispatch, payload) => {
       alert(order.message);
     else
       dispatch(orderActions.newOrder(order.data))
+      getBalances(dispatch);
     }).catch(error => console.log(error));
 }
 
-export { getOrders, sellOrder }
+export { getOrders, newOrder }
