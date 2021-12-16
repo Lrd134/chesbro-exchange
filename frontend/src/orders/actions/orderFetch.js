@@ -23,7 +23,8 @@ const sellOrder = (dispatch, payload) => {
                     amount: parseFloat(payload.amount),
                     ticker: payload.ticker,
                     user_id: payload.id,
-                    sell: payload.sell
+                    sell: payload.sell,
+                    completed: 0
             }
           })
   }

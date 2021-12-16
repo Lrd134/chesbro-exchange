@@ -5,6 +5,7 @@ import NavBar from '../../NavBar';
 import { getUsers } from '../../users/actions/userFetch';
 import { getBalances } from '../../balances/actions/balanceFetch';
 import { getTokens } from '../../tokens/actions/tokenFetch';
+import { getOrders } from '../../orders/actions/orderFetch';
 class Home extends Component {
   componentDidMount() {
     
@@ -13,6 +14,7 @@ class Home extends Component {
     !this.props.balances_requesting && (this.props.balances.balances.length === 0) ?
       this.props.getBalances() : console.log("Requesting balances...")
     !this.props.tokens.requesting && (this.props.tokens.tokens.length === 0) ? this.props.getTokens() : console.log("Requesting tokens...");
+    !this.props.orders.requesting && (this.props.orders.orders.length === 0) ? this.props.getOrders() : console.log("Requesting orders...");
   }
   render() {
     return (
@@ -28,14 +30,16 @@ const mapDispatchToProps = dispatch => {
   return {
     getUsers: () => getUsers(dispatch),
     getBalances: () => getBalances(dispatch),
-    getTokens: () => getTokens(dispatch)
+    getTokens: () => getTokens(dispatch),
+    getOrders: () => getOrders(dispatch)
   }
 }
-const mapStateToProps = ({current_user, users, tokens, balances}) => {
+const mapStateToProps = ({current_user, users, tokens, balances, orders}) => {
   return {
     tokens,
     balances,
     users,
+    orders,
     current_user,
   }
 }

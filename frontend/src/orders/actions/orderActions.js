@@ -1,7 +1,7 @@
 const orderActions = {
   newOrder: (data) => ({ type: "NEW_ORDER", 
     payload: {
-      order: data
+      data
     }
   }),
   addOrders: orders => ({

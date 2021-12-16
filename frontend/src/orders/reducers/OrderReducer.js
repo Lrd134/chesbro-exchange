@@ -5,8 +5,10 @@ const OrderReducer = (state = {
   switch(action.type) {
     case("START_ADDING_ORDERS_REQUEST" || "START_CREATING_ORDER" || "START_UPDATING_ORDER" || "START_DELETING_ORDER"):
       return {...state, requesting: true}
+    case("ADD_ORDERS"):
+      return {...state, orders: action.orders}
     case("NEW_ORDER"):
-      return {...state, orders: state.orders.concat(action.payload)}
+      return {...state, orders: state.orders.concat(action.payload.data)}
     case("REMOVE_ORDER"):
       return {...state, orders: state.orders, not_finished: true }
     default:
