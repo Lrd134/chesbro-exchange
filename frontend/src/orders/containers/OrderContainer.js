@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Order from '../components/Order';
 import Orders from '../components/Orders';
-import { sellOrder } from '../actions/orderFetch';
+import { newOrder } from '../actions/orderFetch';
 class OrderContainer extends Component {
   state = {
     amounts: {
@@ -14,7 +14,7 @@ class OrderContainer extends Component {
     this.props.sellToken(this.state.amounts.sell, this.props.current_user.user.id, ticker)
   }
   handleBuy = ticker => {
-
+    this.props.buyToken(this.state.amounts.buy, this.props.current_user.user.id, ticker)
   }
   handleChange = event => {
     this.setState(prevState => ({
@@ -52,7 +52,16 @@ const mapDispatchToProps = dispatch => ({
       ticker: tokenTicker,
       sell: 1
     }
-    sellOrder(dispatch, payload)
+    newOrder(dispatch, payload)
+  },
+  buyToken: (amount, userId, tokenTicker) => {
+    const payload = {
+      amount: amount,
+      id: userId,
+      ticker: tokenTicker,
+      sell: 0
+    }
+    newOrder(dispatch, payload)
   }
 })
 export default connect(mapStateToProps, mapDispatchToProps)(OrderContainer);
