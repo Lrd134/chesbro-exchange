@@ -7,7 +7,7 @@ class OrderValidator < ActiveModel::Validator
     end
     
     if !record.sell
-      unless Balance.by_order record, record.user
+      unless Balance.by_order record, record.user, record.token
         record.errors.add :amount, "Please deposit more USD";
       end
     end
