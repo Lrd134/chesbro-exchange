@@ -30,7 +30,7 @@ class OrderContainer extends Component {
       return (
         <div className='order-container'>
           <Order handleSell={this.handleSell} handleBuy={this.handleBuy} handleChange={this.handleChange} amounts={this.state.amounts} current_user={this.props.current_user}/>
-          <Orders/>
+          <Orders tokens={this.props.tokens} orders={this.props.orders}/>
         </div>
       )
     else
@@ -39,8 +39,10 @@ class OrderContainer extends Component {
       )
   }
 }
-const mapStateToProps = ({current_user}) => ({
-  current_user: current_user.current_user
+const mapStateToProps = ({current_user, tokens, orders}) => ({
+  current_user: current_user.current_user,
+  tokens: tokens.tokens,
+  orders: orders.orders
 })
 const mapDispatchToProps = dispatch => ({
   sellToken: (amount, userId, tokenTicker) => {
