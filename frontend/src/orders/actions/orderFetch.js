@@ -21,8 +21,9 @@ const sellOrder = (dispatch, payload) => {
     body: JSON.stringify({
             order:{
                     amount: parseFloat(payload.amount),
-                    token_id: payload.token_id,
-                    user_id: payload.id
+                    ticker: payload.ticker,
+                    user_id: payload.id,
+                    sell: payload.sell
             }
           })
   }

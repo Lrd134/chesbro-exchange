@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import orderActions from '../actions/orderActions';
 import Order from '../components/Order';
+import { sellOrder } from '../actions/orderFetch';
 class OrderContainer extends Component {
   state = {
     amounts: {
@@ -41,6 +41,14 @@ const mapStateToProps = ({current_user}) => ({
   current_user: current_user.current_user
 })
 const mapDispatchToProps = dispatch => ({
-  sellToken: (amount, userId, tokenTicker) => dispatch(orderActions.newOrder(amount, userId, tokenTicker))
+  sellToken: (amount, userId, tokenTicker) => {
+    const payload = {
+      amount: amount,
+      id: userId,
+      ticker: tokenTicker,
+      sell: 1
+    }
+    sellOrder(dispatch, payload)
+  }
 })
 export default connect(mapStateToProps, mapDispatchToProps)(OrderContainer);
