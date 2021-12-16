@@ -1,0 +1,10 @@
+
+.exchange-container a:link {
+  color: rgb(0, 174, 29);
+}
+.exchange-container a:visited {
+  color: rgb(0, 106, 18);
+}
+.exchange-container a:focus {
+  color: rgb(174, 12, 0);
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import TokensContainer from '../../tokens/containers/TokensContainer';
-
+import '../Exchange.css';
 const Exchange = props => {
   return (
     <div className="exchange-container">
