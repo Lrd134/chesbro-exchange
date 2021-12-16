@@ -34,7 +34,7 @@ const newBalance = (dispatch, payload = {
   fetch(indexUrl + 'balances', newBalanceObj)
   .then(resp => resp.json())
   .then(balance =>
-    dispatch(balanceActions.newBalance(balance))).catch(error => console.log(error));
+    dispatch(balanceActions.newBalance(balance.data))).catch(error => console.log(error));
 }
 
 

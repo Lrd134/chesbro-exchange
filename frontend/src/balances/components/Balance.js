@@ -3,7 +3,7 @@ import React from 'react';
 const Balance = ({balance}) => {
   return (
     <li>
-      {balance.balance}
+      {balance.token.ticker}: {balance.balance}
     </li>
   )
 }

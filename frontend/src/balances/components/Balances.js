@@ -3,7 +3,7 @@ import Balance from './Balance';
 
 const Balances = (props) => {
   const renderBalances = () => {
-    const balances = props.balances.map(balance => <Balance key={balance.id} balance={balance}/>)
+    const balances = props.balances.map(({attributes}) => <Balance key={attributes.id} balance={attributes}/>)
     if (balances.length < 1) {
       return (<Balance balance={{
         balance: "No Deposits Found"
