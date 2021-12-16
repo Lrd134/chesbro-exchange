@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+usd = Token.create(ticker: "usd", name: "Dollar")
 btc = Token.create(ticker: "btc", name: "Bitcoin")
 eth = Token.create(ticker: "ETH", name: "Ethereum")
 doge = Token.create(ticker: "doge", name: "doge")
