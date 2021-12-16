@@ -4,6 +4,7 @@ import BalanceForm from '../components/BalanceForm';
 import Balances from '../components/Balances';
 import Deposit from '../components/Deposit';
 import { newBalance } from '../actions/balanceFetch'
+import '../BalanceContainer.css'
 class BalanceContainer extends Component {
   state = {
     token: "Bitcoin",
@@ -27,7 +28,7 @@ class BalanceContainer extends Component {
     }
     if (this.props.current_user.current_user.user)
       return (
-        <div>
+        <div className="deposit-form">
           <BalanceForm tokens={this.props.tokens} handleChange={this.handleChange} />
           <Deposit deposit={() => this.props.deposit(data(), this.props.current_user.current_user.user)}/>
           <label> Your Balances: 
