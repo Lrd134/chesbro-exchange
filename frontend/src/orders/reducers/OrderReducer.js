@@ -14,3 +14,5 @@ const OrderReducer = (state = {
 
   }
 }
+
+export default OrderReducer;
