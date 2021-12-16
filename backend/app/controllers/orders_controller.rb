@@ -3,21 +3,23 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all
-    render json: serialize_order @orders {:is_collection => true}
+    render json: serialize_order(@orders, {:is_collection => true})
   end
 
   def show
-    render json: serialize_order @order
+    render json: serialize_order(@order)
   end
 
   def create
+    byebug
     @order = Order.create(order_params)
-    render json: serialize_order @order
+    byebug
+    render json: serialize_order(@order)
   end
 
   def update
     @order.update(order_params)
-    render json: serialize_order @order
+    render json: serialize_order(@order)
   end
 
   def destroy
@@ -35,7 +37,7 @@ class OrdersController < ApplicationController
     end
 
     def order_params
-      params.require(:order).permit(:user_id, :token_id, :amount)
+      params.require(:order).permit(:user_id, :token_id, :amount, :sell)
     end
     
     def serialize_order(order, options = nil)
