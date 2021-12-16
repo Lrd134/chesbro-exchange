@@ -11,10 +11,16 @@ class OrdersController < ApplicationController
   end
 
   def create
-    byebug
+    @token = Token.find_by(params.require(:order).permit(:ticker))
+    params[:order][:token_id] = @token.id
     @order = Order.create(order_params)
-    byebug
-    render json: serialize_order(@order)
+
+    if @order.errors.messages != {}
+      render json: {:message => @order.errors.messages[:amount]}
+    else
+      render json: serialize_order(@order)
+    end
+
   end
 
   def update
