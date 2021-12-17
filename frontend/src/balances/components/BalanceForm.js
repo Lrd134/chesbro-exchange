@@ -20,7 +20,7 @@ const BalanceForm = props => {
 
       <label> Deposit Amount
         <br></br>
-        <input type="number" name="value-balance" min="0.001" required onChange={props.handleChange}/>
+        <input type="number" name="value-balance" required onChange={props.handleChange}/>
       </label>
       
     </form>
