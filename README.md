@@ -1,41 +1,74 @@
 # chesbro-exchange
 My mock cryptocurrency exchange.
+
+
 # README
+This application requires Ruby, Rails, NodePackageManager, Postgresql and if you are on Windows, for the linux environment to be configured.
+Link to install each will be at the bottom.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
+## Ruby on Rails/Startup Guide
+#### See Configuration
 * Ruby version
+
+    ruby 2.6.1p33 (2019-01-30 revision 66950) [x86_64-linux]
 
 * System dependencies
 
+    You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11.
+
 * Configuration
+
+    Use ```bash
+    sudo service postgresql start
+    ```
+    Type in your sudo password and press enter
+    Type ```bash 
+    sudo -i -u postgres
+    ``` and press enter
+    Type ```bash
+    cd /BackendDir
+    ``` ( this will vary depending on where you installed the file. [On WSL you can prepend your route with ```bash
+    /mnt/
+    ```])
+    Type ```bash
+    rails db:migrate
+    ``` and press enter
+    Type ```bash
+    rails s
+    ``` and press enter
+    Open a new terminal, and cd to the *frontend*
+    Type ```bash
+    npm start
+    ``` in the frontend and press ```bash
+    y
+    ``` this will start the server on another port
 
 * Database creation
 
+    If the database looks weird in any way we reccomend running rails db:rollback to Version=0
+    Then run ```bash
+    rails db:migrate
+    ``` and ```bash
+    rails db:seed
+    ```
+
 * Database initialization
 
-* How to run the test suite
+    Run ```bash
+    rails db:migrate
+    ``` and ```bash
+    rails db:seed
+    ```
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+    Allows for user creation with a name and email, allows for a user for deposit and then post a sell/buy with available balance.
 
-* ...
 
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
@@ -95,3 +128,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+* Windows Subsytem for Linux Installation Guide from Microsoft
+
+    https://docs.microsoft.com/en-us/windows/wsl/install
