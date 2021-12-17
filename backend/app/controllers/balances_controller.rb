@@ -11,7 +11,14 @@ before_action :set_balance, only: %i[show update destroy]
   end
   
   def create
-    @balance = Balance.create(balance_params)
+    @balance = Balance.exists params.require(:balance).permit(:user_id, :token_id)
+
+    if @balance
+      @balance.update(balance: @balance.balance + params.require(:balance).permit(:balance)[:balance].to_f)
+    else
+      @balance = Balance.create(balance_params)
+    end
+
     if @balance
       render json: balance_serializer(@balance)
     else
