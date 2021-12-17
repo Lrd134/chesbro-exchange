@@ -35,7 +35,7 @@ const newUser = (dispatch, user = {
     }
   }).catch(error => console.log(error));
 }
-const updateUser = (dispatch, user) => {
+const updateUser = (dispatch, user, id) => {
   const updateUserObj = {
     headers: {
       "Content-Type": "application/json",
@@ -51,11 +51,12 @@ const updateUser = (dispatch, user) => {
         }
       })}
   dispatch(userActions.updateUserRequest)
-  fetch(indexUrl + users + user.id, updateUserObj).then(resp => resp.json()).then(user => {
+  fetch(indexUrl + users + id, updateUserObj).then(resp => resp.json()).then(user => {
     if (user.message)
       alert(user.message);
-    else
+    else {
       dispatch(userActions.updateUser(user.data))
+    }
   }).catch(error => console.log(error));
 }
 const deleteUser = (dispatch, {user}) => {
