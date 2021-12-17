@@ -22,7 +22,7 @@ const myRoutes = () => {
           </main>
         }
       />
-        <Route path="signup" element={<UserForm/>} />
+        <Route path="signup" element={<UserForm text="signup"/>} />
         <Route path="users" element={<UsersContainer />} />
         <Route path="exchange" element={<Exchange />} />
         <Route path="exchange/:ticker" element={<OrderContainer />} />  

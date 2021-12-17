@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { newUser } from '../actions/userFetch';
 import Signup from '../../login/components/Signup';
+import Update from '../../login/components/Update';
+import { updateUser } from '../actions/userFetch';
 class UserForm extends Component {
   state = {
     name: "",
@@ -35,7 +37,7 @@ class UserForm extends Component {
         <form onSubmit={this.handleSubmit} className="user form">
           <input onChange={this.handleChange} name="user-name" type="text" className="user input"/><br></br>
           <input onChange={this.handleChange} name="user-email" type="text" className="user input"/><br></br><br></br>
-          <Signup user={this.state}/>
+          {(this.props.text === "signup") ? <Signup user={this.state}/> : <Update updateUser={this.props.updateUser} current_user={this.props.current_user} user={this.state}/>}
         </form>
       </div>
     )
@@ -46,7 +48,16 @@ const mapDispatchToProps = dispatch => {
     return {
       userEvent: state => {
           newUser(dispatch, state)
+      },
+      updateUser: (user, id) => {
+        updateUser(dispatch, user, id)
       }
     }
 }
-export default connect(null, mapDispatchToProps)(UserForm)
+
+const mapStateToProps = ({current_user}) => {
+  return ({
+    current_user: current_user.current_user
+  })
+}
+export default connect(mapStateToProps, mapDispatchToProps)(UserForm)
