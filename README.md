@@ -1,13 +1,15 @@
 # chesbro-exchange
 My mock cryptocurrency exchange.
-
-
 # README
 This application requires Ruby, Rails, NodePackageManager, Postgresql and if you are on Windows, for the linux environment to be configured.
 Link to install each will be at the bottom.
 
+
+
 ## Ruby on Rails/Startup Guide
 #### See Configuration
+
+
 * Ruby version
 
     ruby 2.6.1p33 (2019-01-30 revision 66950) [x86_64-linux]
@@ -18,53 +20,30 @@ Link to install each will be at the bottom.
 
 * Configuration
 
-    Use ```bash
-    sudo service postgresql start
-    ```
+    Use ```sudo service postgresql start```
     Type in your sudo password and press enter
-    Type ```bash 
-    sudo -i -u postgres
-    ``` and press enter
-    Type ```bash
-    cd /BackendDir
-    ``` ( this will vary depending on where you installed the file. [On WSL you can prepend your route with ```bash
-    /mnt/
-    ```])
-    Type ```bash
-    rails db:migrate
-    ``` and press enter
-    Type ```bash
-    rails s
-    ``` and press enter
+    Type ```sudo -i -u postgres``` and press enter
+    Type ```cd /BackendDir``` ( this will vary depending on where you installed the file. [On WSL you can prepend your route with ```/mnt/```])
+    Type ```rails db:migrate``` and press enter
+    Type ```rails s``` and press enter
     Open a new terminal, and cd to the *frontend*
-    Type ```bash
-    npm start
-    ``` in the frontend and press ```bash
-    y
-    ``` this will start the server on another port
+    Type ```npm start``` in the frontend and press ```y``` this will start the server on another port
 
 * Database creation
 
     If the database looks weird in any way we reccomend running rails db:rollback to Version=0
-    Then run ```bash
-    rails db:migrate
-    ``` and ```bash
-    rails db:seed
-    ```
+    Then run ```rails db:migrate``` and ```rails db:seed```
 
 * Database initialization
 
-    Run ```bash
-    rails db:migrate
-    ``` and ```bash
-    rails db:seed
-    ```
+    Run ```rails db:migrate``` and ```rails db:seed```
+
+* How to run the test suite
+
 
 * Services (job queues, cache servers, search engines, etc.)
 
     Allows for user creation with a name and email, allows for a user for deposit and then post a sell/buy with available balance.
-
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
