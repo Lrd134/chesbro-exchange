@@ -20,7 +20,7 @@ Link to install each will be at the bottom.
 
 * Configuration
 
-    Use ```sudo service postgresql start```
+    Use ```bash sudo service postgresql start ```
     Type in your sudo password and press enter
     Type ```sudo -i -u postgres``` and press enter
     Type ```cd /BackendDir``` ( this will vary depending on where you installed the file. [On WSL you can prepend your route with ```/mnt/```])
