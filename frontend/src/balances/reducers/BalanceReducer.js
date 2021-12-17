@@ -9,21 +9,23 @@ const balanceReducer = (state = {
     {
       return {...state, balances: action.balances}
     }
-    case("NEW_BALANCE"): {      
-      return {...state, balances: state.balances.concat(action.payload.balance)}
+    case("NEW_BALANCE"): {
+      if (state.balances.find(balance => balance.id === action.payload.balance.id)) {
+        let updatedBalances = state.balances.map(balance => {
+          if(balance.id === action.payload.balance.id)
+            return Object.assign({}, action.payload.balance);
+          else
+            return balance;
+        })
+        return {...state, balances: updatedBalances}
+      } else
+        return {...state, balances: state.balances.concat(action.payload.balance)}
     }
     case("REMOVE_BALANCE"):
       const remainingBalances = state.balances.filter(balance => balance.id !== action.payload)
       return {...state, remainingBalances}
-    case("UPDATE_BALANCE"):
-      let updatedBalances = state.balances.map(balance => {
+    // case("UPDATE_BALANCE"):
 
-        if(balance.id === action.payload.id)
-          return Object.assign({}, action.payload);
-        else
-          return balance;
-      })
-      return {...state, updatedBalances}
     default:
       return state;
   }
