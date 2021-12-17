@@ -3,7 +3,7 @@
   const loginActions = {
     loginUser: (user) => {
       return { type: "LOGIN_USER", payload: {
-        user
+        user: user
       }}
     },
     logoutUser: { type: "LOGOUT_USER" },

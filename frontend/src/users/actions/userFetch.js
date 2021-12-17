@@ -30,8 +30,8 @@ const newUser = (dispatch, user = {
     if (user.message)
       alert(user.message);
     else {
-      dispatch(userActions.newUser(user));
-      dispatch(loginActions.loginUser(user));
+      dispatch(userActions.newUser(user.data));
+      dispatch(loginActions.loginUser(user.data));
     }
   }).catch(error => console.log(error));
 }
@@ -55,7 +55,7 @@ const updateUser = (dispatch, user) => {
     if (user.message)
       alert(user.message);
     else
-      dispatch(userActions.updateUser(user))
+      dispatch(userActions.updateUser(user.data))
   }).catch(error => console.log(error));
 }
 const deleteUser = (dispatch, {user}) => {
@@ -71,7 +71,7 @@ const deleteUser = (dispatch, {user}) => {
   const url = indexUrl + users + user.id.toString();
   fetch(url, deleteUserObj).then(resp => resp.json()).then(json => {
     alert(json.message);
-    dispatch(userActions.removeUser(user.id));
+    dispatch(userActions.removeUser(user.data.id));
     dispatch(loginActions.logoutUserRequest)
     dispatch(loginActions.logoutUser());
   }).catch(error => {

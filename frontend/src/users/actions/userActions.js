@@ -1,9 +1,7 @@
 const userActions = {
-  newUser: ({name, email, id}) => ({ type: "NEW_USER", 
+  newUser: (user) => ({ type: "NEW_USER", 
     payload: {
-      name,
-      email,
-      id
+      user: user
     }
   }),
   addUsers: users => ({
@@ -12,18 +10,14 @@ const userActions = {
   }),
   removeUser: id => ({type: "REMOVE_USER", payload: id}),
   
-  updateUser: ({id, name, email}) => {
+  updateUser: (user) => {
     return {type: "UPDATE_USER", payload: {
-      id,
-      name,
-      email
+      user: user
     }}
   },
-  loginUser: ({id, name, email}) => {
+  loginUser: (user) => {
     return { type: "LOGIN_USER", payload: {
-      id,
-      name,
-      email
+      user: user
     }}
   },
   initUsers: {type: "START_ADDING_USERS_REQUEST"},
