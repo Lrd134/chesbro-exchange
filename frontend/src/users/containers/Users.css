@@ -1,0 +1,21 @@
+#users {
+  text-decoration: underline;
+}
+div.user-container {
+  column-count: 2;
+  column-fill: balance;
+  column-gap: 10px;
+  column-rule-style: dashed;
+}
+li {
+  margin-bottom: 5px;
+  margin-right: 32px;
+}
+
+span.user {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: rgb(30, 63, 73);
+}

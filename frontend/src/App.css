@@ -6,7 +6,9 @@ body {
   background-size:cover;
   background-color: grey;
 }
-
+li {
+  list-style-type: none;
+}
 .App > a {
   text-decoration: none;
   padding: 5px;
