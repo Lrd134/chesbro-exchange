@@ -5,40 +5,29 @@ class OrderValidator < ActiveModel::Validator
         "btc" => 50000.0,
         "eth" => 4000.0,
         "doge" => 0.15,
-        "bnb" => 500,
-        "usdt" => 1
+        "bnb" => 500.0,
+        "usdt" => 1.0
       }
 
       if !order.sell
         @usd = Token.find_by(ticker: "usd")
-        @bals = Balance.where(user_id: user.id, token_id: @usd.id)
-        @amount = order.amount * price[token.ticker]
+        @bal = Balance.where(user_id: user.id, token_id: @usd.id)[0]
+        @amount = order.amount * price[token.ticker.downcase]
       else
         @amount = order.amount
-        @bals = Balance.where(user_id: user.id, token_id: token.id)
+        @bal = Balance.where(user_id: user.id, token_id: token.id)[0]
       end
-
-      @total = 0;
-      @bals.each { | bal | @total += bal.balance }
-
-      if @total < @amount
+      if @bal.balance < @amount
         return false
       else
-        @bals.each do | bal | 
-          if bal.balance <= @amount && @amount != 0
-            @amount -= bal.balance
-            bal.update(balance: 0)
-          elsif bal.balance >= @amount && @amount != 0
-            bal.update(balance: bal.balance - @amount)
-            @amount = 0;
-          end
-        end
+        @bal.update(balance: @bal.balance - @amount)
+        @amount = 0;
+      end
 
         if @amount == 0
           return true;
         end
 
-      end
     end
 
 
