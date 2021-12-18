@@ -3,13 +3,17 @@
   color: rgb(0, 174, 29);
 }
 .exchange-container a:visited {
-  color: rgb(0, 106, 18);
+  color: rgb(15, 119, 33);
 }
 .exchange-container a:focus {
   color: rgb(174, 12, 0);
 }
 
-
+.exchange-container {
+  background-color: rgb(102, 25, 102);
+  margin-top: 10px;
+  padding: 3px; 
+}
 
 .buy-form a:link, .buy-form a:visited {
   color: rgb(0, 106, 18)
