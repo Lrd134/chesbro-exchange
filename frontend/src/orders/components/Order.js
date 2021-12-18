@@ -3,6 +3,8 @@ import SubmitOrder from './SubmitOrder';
 const Order = ({handleSell, handleBuy, handleChange, amounts}) => {
   return (
     <div className="order-component">
+      <br></br>
+      <br></br>
       <form className="buy-form">
           <input onChange={handleChange} name="buy" value={amounts.buy} type="number"/>
           <SubmitOrder handleSubmit={handleBuy} text="Buy"/>
