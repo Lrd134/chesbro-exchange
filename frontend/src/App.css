@@ -16,3 +16,9 @@ li {
   color: white;
   text-shadow: 1px 1px 2px rgb(0, 255, 229), 0 0 1em rgb(0, 255, 30), 0 0 0.2em rgb(255, 0, 119);
 }
+
+h1 {
+  background-color: black;
+  margin-left: 132px;
+  margin-right: 132px;
+}
