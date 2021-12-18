@@ -51,11 +51,13 @@ const updateUser = (dispatch, user, id) => {
         }
       })}
   dispatch(userActions.updateUserRequest)
+  
   fetch(indexUrl + users + id, updateUserObj).then(resp => resp.json()).then(user => {
     if (user.message)
       alert(user.message);
     else {
       dispatch(userActions.updateUser(user.data))
+      alert("Please logout and back in to see changes.")
     }
   }).catch(error => console.log(error));
 }
