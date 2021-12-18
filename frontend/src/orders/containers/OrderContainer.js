@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Order from '../components/Order';
 import Orders from '../components/Orders';
 import { newOrder } from '../actions/orderFetch';
+import '../Orders.css';
 class OrderContainer extends Component {
   state = {
     amounts: {
