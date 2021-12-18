@@ -6,7 +6,7 @@ const BalanceForm = props => {
 
     </option>))
   return (
-    <form  onSubmit={event => event.preventDefault()}>
+    <form onSubmit={event => event.preventDefault()}>
       <label>
         Select Token to Deposit
         <br></br>
@@ -20,7 +20,7 @@ const BalanceForm = props => {
 
       <label> Deposit Amount
         <br></br>
-        <input type="number" name="value-balance" required onChange={props.handleChange}/>
+        <input onSubmit={event => event.preventDefault()} type="number" name="value-balance" required onChange={props.handleChange}/>
       </label>
       
     </form>
