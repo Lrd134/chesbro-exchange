@@ -30,8 +30,10 @@ class BalanceContainer extends Component {
     if (this.props.current_user.user)
       return (
         <div className="deposit-form">
+          <br></br>
           <BalanceForm tokens={this.props.tokens} handleChange={this.handleChange} />
           <Deposit deposit={() => this.props.deposit(data(), this.props.current_user.user)}/>
+          <br></br>
           <label> Your Balances: 
           <Balances balances={this.balances()}/>
           </label>
