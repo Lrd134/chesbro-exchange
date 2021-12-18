@@ -10,9 +10,10 @@ const OrderReducer = (state = {
     case("REMOVE_ORDER"):
       return {...state, orders: state.orders, not_finished: true }
     
-    case("NEW_ORDER"):
+    case("NEW_ORDER"):{
       if (action.payload.data.id)
         return {...state, orders: state.orders.concat(action.payload.data)}
+    }
     // eslint-disable-next-line    
     default:
       return state;
