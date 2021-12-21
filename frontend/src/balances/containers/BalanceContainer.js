@@ -52,7 +52,7 @@ const mapStateToProps = ({current_user, balances, tokens}) => {
 }
 const mapDispatchToProps = dispatch => {
   return ({
-    deposit: (state, user) => newBalance(dispatch, state, user)
+    deposit: (state, user) => dispatch(newBalance(state, user))
   })
 }
 export default connect(mapStateToProps, mapDispatchToProps)(BalanceContainer)

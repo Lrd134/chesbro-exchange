@@ -47,22 +47,22 @@ const mapStateToProps = ({current_user, tokens, orders}) => ({
 })
 const mapDispatchToProps = dispatch => ({
   sellToken: (amount, userId, tokenTicker) => {
-    const payload = {
+    let payload = {
       amount: amount,
       id: userId,
       ticker: tokenTicker,
       sell: 1
     }
-    newOrder(dispatch, payload)
+    dispatch(newOrder(payload))
   },
   buyToken: (amount, userId, tokenTicker) => {
-    const payload = {
+    let payload = {
       amount: amount,
       id: userId,
       ticker: tokenTicker,
       sell: 0
     }
-    newOrder(dispatch, payload)
+    dispatch(newOrder(payload))
   }
 })
 export default connect(mapStateToProps, mapDispatchToProps)(OrderContainer);

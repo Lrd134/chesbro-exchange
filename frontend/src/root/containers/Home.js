@@ -8,7 +8,6 @@ import { getTokens } from '../../tokens/actions/tokenFetch';
 import { getOrders } from '../../orders/actions/orderFetch';
 class Home extends Component {
   componentDidMount() {
-    
     !this.props.users_requesting && (this.props.users.users.length === 0) ?
       this.props.getUsers() : console.log("Requesting Users...")
     !this.props.balances_requesting && (this.props.balances.balances.length === 0) ?
@@ -17,21 +16,32 @@ class Home extends Component {
     !this.props.orders.requesting && (this.props.orders.orders.length === 0) ? this.props.getOrders() : console.log("Requesting orders...");
   }
   render() {
-    return (
-      <div className="App">
-        <NavBar props={{current_user: this.props.current_user.current_user}}/>
-        <Outlet />
-      </div>
-    )
+    if (this.props.current_user.current_user.user)
+      return (
+        <div className="App">
+          <NavBar props={{current_user: this.props.current_user.current_user}}/>
+          <Outlet />
+        </div>
+      )
+    else
+      return (
+        <div className="App">
+          <NavBar props={{current_user: this.props.current_user.current_user}}/>
+            <h1>Welcome to Chesbro's Exchange</h1>
+            <h3>If you're new here please signup.</h3>
+            <h3>Please click buttons at the top to navigate around.</h3>
+          <Outlet />
+        </div>
+      )
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    getUsers: () => getUsers(dispatch),
-    getBalances: () => getBalances(dispatch),
-    getTokens: () => getTokens(dispatch),
-    getOrders: () => getOrders(dispatch)
+    getUsers: () => dispatch(getUsers()),
+    getBalances: () => dispatch(getBalances()),
+    getTokens: () => dispatch(getTokens()),
+    getOrders: () => dispatch(getOrders())
   }
 }
 const mapStateToProps = ({current_user, users, tokens, balances, orders}) => {

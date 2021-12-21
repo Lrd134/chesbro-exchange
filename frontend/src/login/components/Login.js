@@ -17,4 +17,4 @@ const mapStateToProps = state => {
     users: state.users
   }
 }
-export default connect(mapStateToProps, dispatch => ({loginUser: userName => loginUser(dispatch, userName)}))(Login)
+export default connect(mapStateToProps, dispatch => ({loginUser: userName => dispatch(loginUser(userName))}))(Login)

@@ -22,4 +22,4 @@ const mapStateToProps = state => {
     current_user: state.current_user
   }
 }
-export default connect(mapStateToProps, dispatch => ({newUser: user => newUser(dispatch, user)}))(Signup)
+export default connect(mapStateToProps, dispatch => ({newUser: user => dispatch(newUser(user))}))(Signup)

@@ -11,9 +11,9 @@ const UserReducer = (state = {
     case("NEW_USER"): {
       return {...state, users: state.users.concat(action.payload.user)}
     }
-    case("REMOVE_USER"):
-      const remainingUsers = state.users.filter(user => user.id !== action.payload.user.id)
-      return {...state, users: remainingUsers}
+    case("REMOVE_USER"):{
+      return {...state, users: state.users.filter(user => parseInt(user.id, 10) !== parseInt(action.payload, 10))}
+    }
     case("UPDATE_USER"): {
       let updatedUsers = state.users.map(user => {
 

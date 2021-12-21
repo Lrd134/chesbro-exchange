@@ -47,10 +47,10 @@ class UserForm extends Component {
 const mapDispatchToProps = dispatch => {
     return {
       userEvent: state => {
-          newUser(dispatch, state)
+        dispatch(newUser(state))
       },
       updateUser: (user, id) => {
-        updateUser(dispatch, user, id)
+        dispatch(updateUser(user, id))
       }
     }
 }
