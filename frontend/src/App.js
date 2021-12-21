@@ -12,18 +12,20 @@ import myRoutes from './routes.js'
 // ...
 const store = compose(
     applyMiddleware(thunk),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    window.__REDUX_DEVTOOLS_EXTENSION__
+    ? window.__REDUX_DEVTOOLS_EXTENSION__()
+    : f => f,
 )(createStore)(RootReducer);
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-      <Router>  
-        <Routes>
-            {myRoutes()}
-        </Routes>
-      </Router>
+        <Router>  
+          <Routes>
+              {myRoutes()}
+          </Routes>
+        </Router>
     </Provider>
 
 
